@@ -11,25 +11,27 @@
 body {
     margin: 0;
     font-family: 'Noto Sans Telugu', sans-serif;
-    background: #f8fafc;
-    color: #1e293b;
-    overflow-x: hidden;
+    background: linear-gradient(135deg, #0f766e, #14b8a6, #f0fdfa);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: white;
 }
 
-/* Hero Section */
+/* Animated background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hero */
 .hero {
-    background: linear-gradient(rgba(15,118,110,0.85), rgba(15,118,110,0.85)),
-    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773');
-    background-size: cover;
-    background-position: center;
-    color: white;
     text-align: center;
-    padding: 120px 20px;
-    animation: fadeIn 1.5s ease-in-out;
+    padding: 100px 20px 60px;
 }
 
 .hero h1 {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 15px;
 }
 
@@ -37,78 +39,69 @@ body {
     font-size: 18px;
 }
 
-/* Sections */
-.section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-}
-
-.card {
-    background: white;
-    padding: 30px;
+/* Glass Card */
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 850px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    animation: fadeUp 1.2s ease forwards;
     opacity: 0;
     transform: translateY(40px);
-    animation: slideUp 1s forwards;
 }
 
-.card:nth-child(1) { animation-delay: 0.3s; }
-.card:nth-child(2) { animation-delay: 0.6s; }
-.card:nth-child(3) { animation-delay: 0.9s; }
-.card:nth-child(4) { animation-delay: 1.2s; }
+.glass:nth-of-type(1) { animation-delay: 0.3s; }
+.glass:nth-of-type(2) { animation-delay: 0.6s; }
+.glass:nth-of-type(3) { animation-delay: 0.9s; }
+.glass:nth-of-type(4) { animation-delay: 1.2s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 h2 {
-    color: #0f766e;
     margin-bottom: 20px;
 }
 
 .price {
-    font-size: 40px;
-    color: #f97316;
+    font-size: 42px;
+    color: #ffe082;
     font-weight: bold;
 }
 
+/* Button */
 .button {
-    background: #f97316;
-    color: white;
-    padding: 18px 40px;
+    background: #ffffff;
+    color: #0f766e;
+    padding: 18px 45px;
     border-radius: 50px;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
     display: inline-block;
-    margin-top: 20px;
-    transition: all 0.3s ease;
+    margin-top: 25px;
+    transition: 0.3s ease;
 }
 
 .button:hover {
-    background: #ea580c;
+    background: #ffe082;
     transform: scale(1.08);
 }
 
 /* Footer */
 .footer {
-    background: #0f766e;
-    color: white;
     text-align: center;
     padding: 30px;
-    margin-top: 40px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    font-size: 14px;
+    opacity: 0.9;
 }
 </style>
 </head>
@@ -117,42 +110,38 @@ h2 {
 
 <div class="hero">
 <h1>🧘‍♂️ 21 రోజుల ధ్యాన పరివర్తన సాధన</h1>
-<p>ఒత్తిడి తగ్గి • మనశ్శాంతి పెరిగి • జీవితం మారే శక్తివంతమైన ప్రయాణం</p>
+<p>ఒత్తిడి తగ్గి • మనశ్శాంతి పెరిగి • జీవితం మారే ఆధ్యాత్మిక ప్రయాణం</p>
 <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">ఇప్పుడే చేరండి</a>
 </div>
 
-<div class="section">
-
-<div class="card">
-<h2>మీరు ఎదుర్కొంటున్న సమస్యలు</h2>
+<div class="glass">
+<h2>మీరు ఈ సమస్యలను ఎదుర్కొంటున్నారా?</h2>
 <p>❌ ఒత్తిడి & టెన్షన్<br>
 ❌ నిద్రలేమి<br>
 ❌ మనసు అస్థిరత<br>
 ❌ దృష్టి లోపం</p>
 </div>
 
-<div class="card">
-<h2>మీకు లభించేది</h2>
+<div class="glass">
+<h2>ఈ కార్యక్రమంలో మీకు లభించేది</h2>
 <p>✅ 21 Guided Meditation Audios (Telugu)<br>
 ✅ PDF మార్గదర్శిని<br>
 ✅ Daily Practice Tracker<br>
 ✅ Bonus Live Zoom Session</p>
 </div>
 
-<div class="card">
+<div class="glass">
 <h2>ప్రత్యేక Launch Offer</h2>
 <p class="price">₹399 మాత్రమే</p>
-<p>Limited Time Offer</p>
+<p>మొదటి 100 మందికి మాత్రమే</p>
 <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">నా స్థానాన్ని బుక్ చేసుకోండి</a>
-<p style="margin-top:10px;">🔒 100% Secure Payment</p>
+<p style="margin-top:15px;">🔒 100% Secure Payment</p>
 </div>
 
-<div class="card">
+<div class="glass">
 <h2>ఎందుకు ఈ 21 రోజులు ముఖ్యమైనవి?</h2>
 <p>రోజుకు కేవలం 10 నిమిషాలు.<br>
 21 రోజుల్లో మనస్సు శక్తి, ప్రశాంతత మరియు దృష్టి పెరుగుతుంది.</p>
-</div>
-
 </div>
 
 <div class="footer">
