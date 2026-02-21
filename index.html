@@ -26,24 +26,53 @@ overflow-x:hidden;
 .hero{
 text-align:center;
 padding:120px 20px 80px;
+position:relative;
 animation:fadeIn 1.5s ease-in-out;
+}
+
+/* GLOW AURA BEHIND LOGO */
+.logo-wrapper{
+position:relative;
+display:inline-block;
+}
+
+.logo-wrapper::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:280px;
+height:280px;
+background:radial-gradient(circle, rgba(0,245,160,0.4) 0%, rgba(0,217,245,0.3) 40%, transparent 70%);
+border-radius:50%;
+z-index:0;
+animation:auraPulse 4s ease-in-out infinite;
 }
 
 .logo{
 width:200px;
+position:relative;
+z-index:1;
 margin-bottom:30px;
 animation:logoFloat 3s ease-in-out infinite;
 }
 
+/* MOBILE */
 @media(max-width:768px){
 .logo{
 width:150px;
+}
+.logo-wrapper::before{
+width:200px;
+height:200px;
 }
 .hero h1{
 font-size:28px;
 }
 }
 
+/* HEADING */
 .hero h1{
 font-size:38px;
 margin-bottom:15px;
@@ -52,10 +81,18 @@ background:linear-gradient(90deg,#00f5a0,#00d9f5);
 -webkit-text-fill-color:transparent;
 }
 
-.hero p{
+/* ENERGY TEXT */
+.energy-text{
+max-width:700px;
+margin:25px auto;
 font-size:18px;
-opacity:0.85;
-margin-bottom:30px;
+line-height:1.7;
+opacity:0.9;
+}
+
+.highlight{
+color:#fbbf24;
+font-weight:bold;
 }
 
 /* BUTTON */
@@ -127,7 +164,6 @@ flex:1;
 min-width:250px;
 }
 
-/* MOBILE */
 @media(max-width:900px){
 .image-layout{
 flex-direction:column;
@@ -159,38 +195,43 @@ to{opacity:1; transform:translateY(0);}
 100%{transform:translateY(0);}
 }
 
+@keyframes auraPulse{
+0%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}
+50%{opacity:1; transform:translate(-50%,-50%) scale(1.1);}
+100%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div class="hero">
-    <img src="./logo.png" alt="Sai Deva Meditation Logo" class="logo">
+
+    <div class="logo-wrapper">
+        <img src="./logo.png" alt="Sai Deva Meditation Logo" class="logo">
+    </div>
 
     <h1>🧘‍♂️ 21 రోజుల ధ్యాన పరివర్తన సాధన</h1>
-    <p>ఒత్తిడి తగ్గి • మనశ్శాంతి పెరిగి • జీవితం మారే ఆధ్యాత్మిక ప్రయాణం</p>
+
+    <p class="energy-text">
+        🐄 <strong>గోవు శాంతి & పోషక శక్తికి ప్రతీక</strong><br>
+        Cow represents peace & nurturing energy.<br><br>
+
+        🦁 <strong>సింహం శక్తి & అంతరంగ బలానికి ప్రతీక</strong><br>
+        Lion represents power & inner strength.<br><br>
+
+        <span class="highlight">
+        ఈ రెండు శక్తులను సమతుల్యం చేస్తే జీవితం మారుతుంది.<br>
+        Balance both energies to transform your life.
+        </span>
+    </p>
 
     <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">
         ఇప్పుడే చేరండి
     </a>
-</div>
 
-<!-- PROGRAM SECTION -->
-<div class="glass">
-    <h2>21 Day Deep Healing Program</h2>
-    <p>
-    ✅ 21 Guided Meditation Audios (Telugu)<br>
-    ✅ PDF మార్గదర్శిని<br>
-    ✅ Daily Practice Tracker<br>
-    ✅ Private Telegram Support
-    </p>
-
-    <div class="price">Launch Offer ₹999</div>
-
-    <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">
-        Join 21 Days Program
-    </a>
 </div>
 
 <!-- IMAGE SECTION -->
@@ -203,9 +244,7 @@ to{opacity:1; transform:translateY(0);}
     <div class="center-text">
         <h2>Spiritual Energy Balance</h2>
         <p>
-        Cow represents peace & nurturing energy.<br><br>
-        Lion represents power & inner strength.<br><br>
-        Balance both energies to transform your life.
+        Peace + Power = Transformation.
         </p>
     </div>
 
@@ -215,7 +254,6 @@ to{opacity:1; transform:translateY(0);}
 
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
 © 2026 Sai Deva Meditation | All Rights Reserved
 </div>
