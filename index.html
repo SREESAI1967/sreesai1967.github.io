@@ -3,141 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saideva Meditation</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>21 రోజుల ధ్యాన పరివర్తన సాధన</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+body {
+    margin: 0;
+    font-family: 'Noto Sans Telugu', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #0f766e, #000000);
+    background-size: 400% 400%;
+    animation: gradientMove 18s ease infinite;
+    color: white;
 }
 
-body{
-height:100vh;
-background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-overflow:hidden;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+/* Animated Background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* STAR BACKGROUND */
-canvas{
-position:fixed;
-top:0;
-left:0;
-z-index:-1;
+.hero {
+    text-align: center;
+    padding: 110px 20px 60px;
 }
 
-/* GLASS CARD */
-.card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(15px);
-border-radius:20px;
-padding:40px;
-width:90%;
-max-width:600px;
-box-shadow:0 0 40px rgba(0,0,0,0.6);
-animation:fadeIn 1.5s ease;
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
-h1{
-font-size:38px;
-margin-bottom:15px;
-font-weight:700;
-background:linear-gradient(90deg,#00f5ff,#00ffae);
--webkit-background-clip:text;
-color:transparent;
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
 }
 
-p{
-font-size:18px;
-margin-bottom:25px;
-opacity:0.9;
+/* Glass Cards */
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 22px;
+    padding: 45px;
+    margin: 35px auto;
+    max-width: 850px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
-button{
-padding:12px 30px;
-border:none;
-border-radius:30px;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-background:linear-gradient(90deg,#00f5ff,#00ffae);
-color:black;
-transition:0.4s;
+.glass:nth-of-type(1) { animation-delay: 0.3s; }
+.glass:nth-of-type(2) { animation-delay: 0.6s; }
+.glass:nth-of-type(3) { animation-delay: 0.9s; }
+.glass:nth-of-type(4) { animation-delay: 1.2s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-button:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px #00ffae;
+h2 {
+    margin-bottom: 20px;
 }
 
-/* ANIMATION */
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(40px);
+.price {
+    font-size: 44px;
+    color: #fbbf24;
+    font-weight: bold;
 }
-to{
-opacity:1;
-transform:translateY(0);
+
+/* Button */
+.button {
+    background: linear-gradient(45deg, #fbbf24, #f97316);
+    color: #0f172a;
+    padding: 18px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 25px;
+    transition: 0.3s ease;
 }
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(251,191,36,0.8);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 35px;
+    font-size: 14px;
+    opacity: 0.8;
 }
 </style>
 </head>
 
 <body>
 
-<canvas id="stars"></canvas>
-
-<div class="card">
-<h1>🧘 Sai Deva Meditation</h1>
-<p>ఆర్థిక స్వేచ్ఛ • ఆధ్యాత్మిక శక్తి • మనశ్శాంతి</p>
-<button onclick="alert('Welcome to Sai Deva Meditation!')">Join Now</button>
+<div class="hero">
+<h1>🧘‍♂️ 21 రోజుల ధ్యాన పరివర్తన సాధన</h1>
+<p>ఒత్తిడి తగ్గి • మనశ్శాంతి పెరిగి • జీవితం మారే ఆధ్యాత్మిక ప్రయాణం</p>
+<a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">ఇప్పుడే చేరండి</a>
 </div>
 
-<script>
-// STAR PARTICLES
-const canvas=document.getElementById("stars");
-const ctx=canvas.getContext("2d");
+<div class="glass">
+<h2>మీరు ఈ సమస్యలను ఎదుర్కొంటున్నారా?</h2>
+<p>❌ ఒత్తిడి & టెన్షన్<br>
+❌ నిద్రలేమి<br>
+❌ మనసు అస్థిరత<br>
+❌ దృష్టి లోపం</p>
+</div>
 
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+<div class="glass">
+<h2>ఈ కార్యక్రమంలో మీకు లభించేది</h2>
+<p>✅ 21 Guided Meditation Audios (Telugu)<br>
+✅ PDF మార్గదర్శిని<br>
+✅ Daily Practice Tracker<br>
+✅ Bonus Live Zoom Session</p>
+</div>
 
-let stars=[];
-for(let i=0;i<200;i++){
-stars.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-radius:Math.random()*1.5,
-speed:Math.random()*0.5
-});
-}
+<div class="glass">
+<h2>ప్రత్యేక Launch Offer</h2>
+<p class="price">₹399 మాత్రమే</p>
+<p>మొదటి 100 మందికి మాత్రమే</p>
+<a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">నా స్థానాన్ని బుక్ చేసుకోండి</a>
+<p style="margin-top:15px;">🔒 100% Secure Payment</p>
+</div>
 
-function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-ctx.fillStyle="white";
+<div class="glass">
+<h2>ఎందుకు ఈ 21 రోజులు ముఖ్యమైనవి?</h2>
+<p>రోజుకు కేవలం 10 నిమిషాలు.<br>
+21 రోజుల్లో మనస్సు శక్తి, ప్రశాంతత మరియు దృష్టి పెరుగుతుంది.</p>
+</div>
 
-stars.forEach(star=>{
-ctx.beginPath();
-ctx.arc(star.x,star.y,star.radius,0,Math.PI*2);
-ctx.fill();
-
-star.y+=star.speed;
-if(star.y>canvas.height){
-star.y=0;
-star.x=Math.random()*canvas.width;
-}
-});
-requestAnimationFrame(animate);
-}
-animate();
-</script>
+<div class="footer">
+© 2026 Saideva Meditation | All Rights Reserved
+</div>
 
 </body>
 </html>
