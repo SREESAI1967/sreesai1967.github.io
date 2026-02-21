@@ -11,23 +11,22 @@
 body {
     margin: 0;
     font-family: 'Noto Sans Telugu', sans-serif;
-    background: linear-gradient(135deg, #0f766e, #14b8a6, #f0fdfa);
+    background: linear-gradient(135deg, #0f172a, #0f766e, #000000);
     background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
+    animation: gradientMove 18s ease infinite;
     color: white;
 }
 
-/* Animated background */
+/* Animated Background */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Hero */
 .hero {
     text-align: center;
-    padding: 100px 20px 60px;
+    padding: 110px 20px 60px;
 }
 
 .hero h1 {
@@ -37,22 +36,23 @@ body {
 
 .hero p {
     font-size: 18px;
+    opacity: 0.9;
 }
 
-/* Glass Card */
+/* Glass Cards */
 .glass {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 40px;
-    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 22px;
+    padding: 45px;
+    margin: 35px auto;
     max-width: 850px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
     animation: fadeUp 1.2s ease forwards;
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(50px);
 }
 
 .glass:nth-of-type(1) { animation-delay: 0.3s; }
@@ -72,16 +72,16 @@ h2 {
 }
 
 .price {
-    font-size: 42px;
-    color: #ffe082;
+    font-size: 44px;
+    color: #fbbf24;
     font-weight: bold;
 }
 
 /* Button */
 .button {
-    background: #ffffff;
-    color: #0f766e;
-    padding: 18px 45px;
+    background: linear-gradient(45deg, #fbbf24, #f97316);
+    color: #0f172a;
+    padding: 18px 50px;
     border-radius: 50px;
     text-decoration: none;
     font-size: 18px;
@@ -92,16 +92,16 @@ h2 {
 }
 
 .button:hover {
-    background: #ffe082;
-    transform: scale(1.08);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(251,191,36,0.8);
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    padding: 30px;
+    padding: 35px;
     font-size: 14px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 </style>
 </head>
