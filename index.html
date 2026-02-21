@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -28,16 +29,24 @@ padding:120px 20px 80px;
 animation:fadeIn 1.5s ease-in-out;
 }
 
+/* LOGO SIZE */
 .logo{
-width:200px;
+width:200px;   /* Medium Premium Size */
 margin-bottom:30px;
 animation:logoFloat 3s ease-in-out infinite;
 }
+
+/* MOBILE RESPONSIVE LOGO */
 @media(max-width:768px){
 .logo{
 width:150px;
 }
+.hero h1{
+font-size:28px;
 }
+}
+
+/* HEADING */
 .hero h1{
 font-size:38px;
 margin-bottom:15px;
@@ -70,7 +79,7 @@ transform:scale(1.08);
 box-shadow:0 0 30px rgba(251,191,36,0.9);
 }
 
-/* GLASS CARD */
+/* GLASS SECTION */
 .glass{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(15px);
@@ -78,8 +87,8 @@ border-radius:20px;
 padding:40px;
 margin:40px auto;
 max-width:900px;
-box-shadow:0 8px 32px rgba(0,0,0,0.4);
 text-align:center;
+box-shadow:0 8px 32px rgba(0,0,0,0.4);
 transition:0.4s;
 }
 
@@ -112,11 +121,6 @@ to{opacity:1; transform:translateY(0);}
 100%{transform:translateY(0);}
 }
 
-@media(max-width:768px){
-.hero h1{
-font-size:28px;
-}
-}
 </style>
 </head>
 
@@ -152,6 +156,7 @@ font-size:28px;
     ✅ Private Telegram Support
     </p>
     <div class="price">Launch Offer ₹999</div>
+
     <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">
         Join 21 Days Program
     </a>
