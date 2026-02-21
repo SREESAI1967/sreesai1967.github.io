@@ -22,15 +22,38 @@ color:white;
 overflow-x:hidden;
 }
 
+/* IMAGE TOP SECTION */
+.image-top{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+padding:80px 20px 40px;
+max-width:1200px;
+margin:auto;
+flex-wrap:wrap;
+}
+
+.image-top img{
+width:320px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+transition:0.4s;
+}
+
+.image-top img:hover{
+transform:scale(1.05);
+box-shadow:0 15px 40px rgba(251,191,36,0.8);
+}
+
 /* HERO */
 .hero{
 text-align:center;
-padding:120px 20px 80px;
+padding:60px 20px 100px;
 position:relative;
-animation:fadeIn 1.5s ease-in-out;
 }
 
-/* GLOW AURA BEHIND LOGO */
+/* GLOW AURA */
 .logo-wrapper{
 position:relative;
 display:inline-block;
@@ -58,32 +81,9 @@ margin-bottom:30px;
 animation:logoFloat 3s ease-in-out infinite;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-.logo{
-width:150px;
-}
-.logo-wrapper::before{
-width:200px;
-height:200px;
-}
-.hero h1{
-font-size:28px;
-}
-}
-
-/* HEADING */
-.hero h1{
-font-size:38px;
-margin-bottom:15px;
-background:linear-gradient(90deg,#00f5a0,#00d9f5);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
 /* ENERGY TEXT */
 .energy-text{
-max-width:700px;
+max-width:750px;
 margin:25px auto;
 font-size:18px;
 line-height:1.7;
@@ -106,6 +106,7 @@ font-weight:bold;
 display:inline-block;
 transition:0.3s ease;
 box-shadow:0 0 20px rgba(251,191,36,0.5);
+margin-top:20px;
 }
 
 .button:hover{
@@ -113,82 +114,28 @@ transform:scale(1.08);
 box-shadow:0 0 30px rgba(251,191,36,0.9);
 }
 
-/* GLASS CARD */
-.glass{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
-border-radius:20px;
-padding:40px;
-margin:60px auto;
-max-width:1100px;
-text-align:center;
-box-shadow:0 8px 32px rgba(0,0,0,0.4);
-transition:0.4s;
-}
-
-.glass:hover{
-transform:translateY(-8px);
-}
-
-.price{
-font-size:36px;
-color:#fbbf24;
-margin:15px 0;
-}
-
-/* IMAGE LAYOUT */
-.image-layout{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.image-left img,
-.image-right img{
-width:320px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
-transition:0.4s;
-}
-
-.image-left img:hover,
-.image-right img:hover{
-transform:scale(1.05);
-box-shadow:0 15px 40px rgba(251,191,36,0.8);
-}
-
-.center-text{
-flex:1;
-min-width:250px;
-}
-
+/* MOBILE */
 @media(max-width:900px){
-.image-layout{
+.image-top{
 flex-direction:column;
 text-align:center;
 }
 
-.image-left img,
-.image-right img{
+.image-top img{
 width:90%;
 }
+
+.logo{
+width:150px;
 }
 
-/* FOOTER */
-.footer{
-text-align:center;
-padding:40px;
-opacity:0.6;
+.logo-wrapper::before{
+width:200px;
+height:200px;
+}
 }
 
 /* ANIMATIONS */
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
-}
-
 @keyframes logoFloat{
 0%{transform:translateY(0);}
 50%{transform:translateY(-10px);}
@@ -206,14 +153,19 @@ to{opacity:1; transform:translateY(0);}
 
 <body>
 
-<!-- HERO -->
+<!-- IMAGE SECTION AT TOP -->
+<div class="image-top">
+    <img src="./cow.png" alt="Meditation Cow">
+
+    <img src="./lion.png" alt="Meditation Lion">
+</div>
+
+<!-- HERO SECTION -->
 <div class="hero">
 
     <div class="logo-wrapper">
         <img src="./logo.png" alt="Sai Deva Meditation Logo" class="logo">
     </div>
-
-    <h1>🧘‍♂️ 21 రోజుల ధ్యాన పరివర్తన సాధన</h1>
 
     <p class="energy-text">
         🐄 <strong>గోవు శాంతి & పోషక శక్తికి ప్రతీక</strong><br>
@@ -232,30 +184,6 @@ to{opacity:1; transform:translateY(0);}
         ఇప్పుడే చేరండి
     </a>
 
-</div>
-
-<!-- IMAGE SECTION -->
-<div class="glass image-layout">
-    
-    <div class="image-left">
-        <img src="./cow.png" alt="Meditation Cow">
-    </div>
-
-    <div class="center-text">
-        <h2>Spiritual Energy Balance</h2>
-        <p>
-        Peace + Power = Transformation.
-        </p>
-    </div>
-
-    <div class="image-right">
-        <img src="./lion.png" alt="Meditation Lion">
-    </div>
-
-</div>
-
-<div class="footer">
-© 2026 Sai Deva Meditation | All Rights Reserved
 </div>
 
 </body>
