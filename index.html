@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sai Deva Meditation</title>
 
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -53,7 +52,7 @@ z-index:1;
 animation:logoFloat 3s ease-in-out infinite;
 }
 
-/* CONTENT SECTION */
+/* CONTENT */
 .content-section{
 display:flex;
 align-items:center;
@@ -84,13 +83,13 @@ font-size:18px;
 line-height:1.7;
 }
 
-/* FULL WIDTH POWER BANNER */
+/* POWER BANNER */
 .power-banner{
 width:100%;
 background:linear-gradient(90deg,#fbbf24,#f97316);
 color:#0f172a;
 padding:45px 20px;
-font-size:44px;   /* Doubled Size */
+font-size:44px;
 font-weight:700;
 font-family:'Cinzel', serif;
 letter-spacing:1px;
@@ -105,9 +104,27 @@ margin-top:15px;
 font-family:'Noto Sans Telugu', sans-serif;
 }
 
-/* CTA BUTTON */
+/* NEW MEDITATION CAPTION */
+.meditation-caption{
+max-width:900px;
+margin:60px auto 40px;
+font-size:24px;
+line-height:1.6;
+font-weight:600;
+}
+
+.meditation-caption .english{
+display:block;
+margin-top:15px;
+font-size:20px;
+font-weight:normal;
+opacity:0.85;
+color:#fbbf24;
+}
+
+/* CTA */
 .cta-section{
-margin:50px 0 120px;
+margin:30px 0 120px;
 }
 
 .button{
@@ -155,6 +172,15 @@ padding:30px 15px;
 .power-banner .english{
 font-size:18px;
 }
+
+.meditation-caption{
+font-size:20px;
+padding:0 15px;
+}
+
+.meditation-caption .english{
+font-size:16px;
+}
 }
 
 /* ANIMATIONS */
@@ -174,16 +200,13 @@ font-size:18px;
 
 <body>
 
-<!-- LOGO -->
 <div class="hero">
     <div class="logo-wrapper">
         <img src="./logo.png" alt="Sai Deva Meditation Logo" class="logo">
     </div>
 </div>
 
-<!-- COW | TEXT | LION -->
 <div class="content-section">
-
     <img src="./cow.png" alt="Meditation Cow">
 
     <div class="center-text">
@@ -195,10 +218,8 @@ font-size:18px;
     </div>
 
     <img src="./lion.png" alt="Meditation Lion">
-
 </div>
 
-<!-- POWER BANNER -->
 <div class="power-banner">
     శాంతి శక్తిని స్వీకరించండి. అంతరంగ బలాన్ని మేల్కొలపండి.
     <span class="english">
@@ -206,7 +227,16 @@ font-size:18px;
     </span>
 </div>
 
-<!-- CTA -->
+<!-- NEW ADDED CAPTION -->
+<div class="meditation-caption">
+    మనస్సును నిశ్శబ్దం చేయండి. శక్తిని సమతుల్యం చేయండి.
+    ధ్యానం ద్వారా మీ నిజ స్వరూపాన్ని తెలుసుకోండి.
+    <span class="english">
+    Silence the mind. Balance your energy.
+    Discover your true self through meditation.
+    </span>
+</div>
+
 <div class="cta-section">
     <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">
         ఇప్పుడే చేరండి
