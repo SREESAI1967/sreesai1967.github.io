@@ -22,21 +22,19 @@ color:white;
 overflow-x:hidden;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
 text-align:center;
 padding:120px 20px 80px;
 animation:fadeIn 1.5s ease-in-out;
 }
 
-/* LOGO SIZE */
 .logo{
-width:300px;   /* Medium Premium Size */
+width:200px;
 margin-bottom:30px;
 animation:logoFloat 3s ease-in-out infinite;
 }
 
-/* MOBILE RESPONSIVE LOGO */
 @media(max-width:768px){
 .logo{
 width:150px;
@@ -46,7 +44,6 @@ font-size:28px;
 }
 }
 
-/* HEADING */
 .hero h1{
 font-size:38px;
 margin-bottom:15px;
@@ -79,14 +76,14 @@ transform:scale(1.08);
 box-shadow:0 0 30px rgba(251,191,36,0.9);
 }
 
-/* GLASS SECTION */
+/* GLASS CARD */
 .glass{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(15px);
 border-radius:20px;
 padding:40px;
-margin:40px auto;
-max-width:900px;
+margin:60px auto;
+max-width:1100px;
 text-align:center;
 box-shadow:0 8px 32px rgba(0,0,0,0.4);
 transition:0.4s;
@@ -102,10 +99,51 @@ color:#fbbf24;
 margin:15px 0;
 }
 
+/* IMAGE LAYOUT */
+.image-layout{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.image-left img,
+.image-right img{
+width:320px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+transition:0.4s;
+}
+
+.image-left img:hover,
+.image-right img:hover{
+transform:scale(1.05);
+box-shadow:0 15px 40px rgba(251,191,36,0.8);
+}
+
+.center-text{
+flex:1;
+min-width:250px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.image-layout{
+flex-direction:column;
+text-align:center;
+}
+
+.image-left img,
+.image-right img{
+width:90%;
+}
+}
+
 /* FOOTER */
 .footer{
 text-align:center;
-padding:30px;
+padding:40px;
 opacity:0.6;
 }
 
@@ -126,6 +164,7 @@ to{opacity:1; transform:translateY(0);}
 
 <body>
 
+<!-- HERO SECTION -->
 <div class="hero">
     <img src="./logo.png" alt="Sai Deva Meditation Logo" class="logo">
 
@@ -137,16 +176,7 @@ to{opacity:1; transform:translateY(0);}
     </a>
 </div>
 
-<div class="glass">
-    <h2>మీరు ఈ సమస్యలను ఎదుర్కొంటున్నారా?</h2>
-    <p>
-    ❌ ఒత్తిడి & టెన్షన్<br>
-    ❌ నిద్రలేమి<br>
-    ❌ మనసు అస్థిరత<br>
-    ❌ దృష్టి లోపం
-    </p>
-</div>
-
+<!-- PROGRAM SECTION -->
 <div class="glass">
     <h2>21 Day Deep Healing Program</h2>
     <p>
@@ -155,6 +185,7 @@ to{opacity:1; transform:translateY(0);}
     ✅ Daily Practice Tracker<br>
     ✅ Private Telegram Support
     </p>
+
     <div class="price">Launch Offer ₹999</div>
 
     <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">
@@ -162,14 +193,29 @@ to{opacity:1; transform:translateY(0);}
     </a>
 </div>
 
-<div class="glass">
-    <h2>ఎందుకు Sai Deva Meditation?</h2>
-    <p>
-    ఇది సాధారణ ధ్యానం కాదు — ఇది సంపూర్ణ జీవన మార్పు సిస్టమ్.
-    రోజుకు కేవలం 10 నిమిషాలు.
-    </p>
+<!-- IMAGE SECTION -->
+<div class="glass image-layout">
+    
+    <div class="image-left">
+        <img src="./cow.png" alt="Meditation Cow">
+    </div>
+
+    <div class="center-text">
+        <h2>Spiritual Energy Balance</h2>
+        <p>
+        Cow represents peace & nurturing energy.<br><br>
+        Lion represents power & inner strength.<br><br>
+        Balance both energies to transform your life.
+        </p>
+    </div>
+
+    <div class="image-right">
+        <img src="./lion.png" alt="Meditation Lion">
+    </div>
+
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
 © 2026 Sai Deva Meditation | All Rights Reserved
 </div>
