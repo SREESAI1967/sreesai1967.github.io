@@ -13,20 +13,23 @@ body {
     font-family: 'Noto Sans Telugu', sans-serif;
     background: #f8fafc;
     color: #1e293b;
+    overflow-x: hidden;
 }
 
+/* Hero Section */
 .hero {
-    background: linear-gradient(rgba(15,118,110,0.8), rgba(15,118,110,0.8)),
+    background: linear-gradient(rgba(15,118,110,0.85), rgba(15,118,110,0.85)),
     url('https://images.unsplash.com/photo-1506126613408-eca07ce68773');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 15px;
 }
 
@@ -34,6 +37,7 @@ body {
     font-size: 18px;
 }
 
+/* Sections */
 .section {
     padding: 60px 20px;
     max-width: 900px;
@@ -46,8 +50,16 @@ body {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 1s forwards;
 }
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+.card:nth-child(4) { animation-delay: 1.2s; }
 
 h2 {
     color: #0f766e;
@@ -69,29 +81,34 @@ h2 {
     font-size: 18px;
     display: inline-block;
     margin-top: 20px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
     background: #ea580c;
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
-.badge {
-    background: #dc2626;
-    color: white;
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
+/* Footer */
 .footer {
     background: #0f766e;
     color: white;
     text-align: center;
     padding: 30px;
+    margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 </head>
@@ -102,7 +119,6 @@ h2 {
 <h1>🧘‍♂️ 21 రోజుల ధ్యాన పరివర్తన సాధన</h1>
 <p>ఒత్తిడి తగ్గి • మనశ్శాంతి పెరిగి • జీవితం మారే శక్తివంతమైన ప్రయాణం</p>
 <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">ఇప్పుడే చేరండి</a>
-<div class="badge">మొదటి 100 మందికి మాత్రమే</div>
 </div>
 
 <div class="section">
@@ -126,7 +142,7 @@ h2 {
 <div class="card">
 <h2>ప్రత్యేక Launch Offer</h2>
 <p class="price">₹399 మాత్రమే</p>
-<p>ఈ ధర limited time మాత్రమే.</p>
+<p>Limited Time Offer</p>
 <a href="YOUR_RAZORPAY_LINK_HERE" class="button" target="_blank">నా స్థానాన్ని బుక్ చేసుకోండి</a>
 <p style="margin-top:10px;">🔒 100% Secure Payment</p>
 </div>
