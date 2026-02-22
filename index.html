@@ -53,6 +53,7 @@ display:inline-block;margin-top:25px;
 background:linear-gradient(90deg,#00f5a0,#00d9f5);
 color:#0f172a;padding:18px 45px;border-radius:20px;
 text-decoration:none;font-weight:bold;}
+
 .free-tag{
 display:inline-block;background:#fbbf24;color:#111827;
 padding:4px 12px;border-radius:20px;font-size:12px;font-weight:bold;margin-bottom:8px;}
@@ -62,17 +63,24 @@ padding:4px 12px;border-radius:20px;font-size:12px;font-weight:bold;margin-botto
 .email-section input{padding:14px;width:260px;border-radius:30px;border:none;margin-right:10px;}
 .email-section button{padding:14px 35px;border-radius:30px;border:none;background:#fbbf24;font-weight:bold;cursor:pointer;}
 
-/* TESTIMONIALS */
-.testimonials{padding:80px 20px;background:#111827;}
-.testimonial-box{background:rgba(255,255,255,0.05);padding:25px;margin:20px auto;max-width:600px;border-radius:15px;}
-.testimonial-box span{display:block;margin-top:15px;color:#fbbf24;font-weight:bold;}
+/* GOOGLE REVIEWS STYLE */
+.reviews{padding:80px 20px;background:#111827;}
+.reviews h2{margin-bottom:40px;font-size:28px;}
+.review-card{
+background:#ffffff;color:#111827;padding:25px;margin:20px auto;
+max-width:600px;border-radius:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+text-align:left;}
+.stars{color:#fbbf24;font-size:18px;margin-bottom:10px;}
+.review-card span{display:block;margin-top:15px;font-weight:bold;color:#444;}
 
 /* FAQ */
 .faq{padding:80px 20px;}
-.faq-item{max-width:700px;margin:20px auto;background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;text-align:left;}
+.faq-item{max-width:700px;margin:20px auto;background:rgba(255,255,255,0.05);
+padding:20px;border-radius:10px;text-align:left;}
 .faq-item h4{color:#fbbf24;margin-bottom:10px;}
 
-/* WhatsApp Floating */
+/* WhatsApp */
 .whatsapp-float{
 position:fixed;bottom:25px;right:25px;
 background:#25D366;color:white;font-size:28px;
@@ -129,29 +137,31 @@ Discover your true self through meditation.
 <h2>📩 Get Free Meditation Updates</h2>
 
 <form id="emailForm" action="https://formsubmit.co/maddururaja1967@gmail.com" method="POST">
-
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="🙏 Welcome to Shanti Shakti Meditation">
 <input type="hidden" name="_template" value="table">
-<input type="hidden" name="_autoresponse" 
-value="🙏 Thank you for joining Shanti Shakti Ana Pana Meditation.
-
-Practice daily for 15 minutes and experience inner peace & power.
-
-Visit: https://saidevameditation.shop">
+<input type="hidden" name="_autoresponse" value="🙏 Thank you for joining Shanti Shakti Ana Pana Meditation. Practice daily for 15 minutes and experience inner peace & power. Visit: https://saidevameditation.shop">
 
 <input type="email" name="email" placeholder="Enter your email" required>
 <button type="submit">Subscribe</button>
-
 </form>
 </section>
 
-<section class="testimonials">
-<h2>🌟 What People Are Saying</h2>
-<div class="testimonial-box">
-<p>"10 rojullo na stress taggindi."</p>
-<span>- Ramesh</span>
+<section class="reviews">
+<h2>⭐ Student Reviews</h2>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"10 rojullo na stress chala taggindi."</p>
+<span>- Ramesh, Hyderabad</span>
 </div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Na confidence improve ayyindi."</p>
+<span>- Lakshmi, Vijayawada</span>
+</div>
+
 </section>
 
 <section class="faq">
