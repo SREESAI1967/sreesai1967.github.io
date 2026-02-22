@@ -18,75 +18,73 @@ body{background:linear-gradient(135deg,#0f0f1a,#111827,#1a1a2e);color:white;text
 content:"";position:absolute;top:50%;left:50%;
 transform:translate(-50%,-50%);
 width:280px;height:280px;
-background:radial-gradient(circle, rgba(0,245,160,0.4) 0%, rgba(0,217,245,0.3) 40%, transparent 70%);
-border-radius:50%;z-index:0;
-animation:auraPulse 4s ease-in-out infinite;}
-.logo{width:200px;position:relative;z-index:1;animation:logoFloat 3s ease-in-out infinite;}
+background:radial-gradient(circle, rgba(0,245,160,0.4), transparent 70%);
+border-radius:50%;animation:auraPulse 4s infinite;}
+.logo{width:200px;animation:logoFloat 3s infinite;}
 
-.content-section{display:flex;align-items:center;justify-content:space-between;
-gap:30px;padding:60px 20px;max-width:1200px;margin:auto;flex-wrap:wrap;}
-.content-section img{width:300px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
-.center-text{flex:1;min-width:280px;font-size:18px;line-height:1.7;}
+/* CONTENT */
+.content-section{display:flex;justify-content:center;gap:30px;
+padding:60px 20px;flex-wrap:wrap;}
+.content-section img{width:300px;border-radius:20px;}
+.center-text{font-size:18px;max-width:400px;}
 
-.power-banner{width:100%;background:linear-gradient(90deg,#ffe8a3,#ffc76b);
-color:#222;padding:15px 10px;font-size:20px;font-weight:600;font-family:'Cinzel', serif;margin-top:40px;}
-.power-banner .english{display:block;font-size:15px;margin-top:5px;}
-
+/* CAPTION */
 .meditation-caption{
-max-width:900px;margin:60px auto 40px;font-size:30px;
-font-family:'Playfair Display', serif;font-weight:700;
-text-shadow:0 0 10px rgba(255,255,255,0.6),
-0 0 20px rgba(0,245,160,0.6),
-0 0 40px rgba(0,217,245,0.6);}
+margin:60px auto;font-size:30px;
+font-family:'Playfair Display', serif;
+text-shadow:0 0 20px rgba(0,245,160,0.6);}
 
+/* BUTTON */
 .button{
 background:linear-gradient(45deg,#fbbf24,#f97316);
-color:#0f172a;padding:18px 55px;border-radius:50px;
+color:#111;padding:18px 55px;border-radius:50px;
 text-decoration:none;font-weight:bold;display:inline-block;margin-top:20px;}
 
-.pdf-button{
-display:inline-block;margin-top:25px;
-background:linear-gradient(90deg,#00f5a0,#00d9f5);
-color:#0f172a;padding:18px 45px;border-radius:20px;
+/* COURSES */
+.courses{padding:100px 20px;background:#111827;}
+.course-container{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;}
+.course-card{
+background:rgba(255,255,255,0.05);
+padding:30px;border-radius:20px;width:280px;
+transition:0.3s;}
+.course-card:hover{transform:translateY(-10px);}
+.price{color:#fbbf24;font-size:22px;font-weight:bold;margin:20px 0;}
+.course-btn{
+display:inline-block;
+background:linear-gradient(45deg,#fbbf24,#f97316);
+color:#111;padding:12px 30px;border-radius:30px;
 text-decoration:none;font-weight:bold;}
 
-.free-tag{
-display:inline-block;background:#fbbf24;color:#111827;
-padding:4px 12px;border-radius:20px;font-size:12px;font-weight:bold;margin-bottom:8px;}
-
-.reviews{padding:80px 20px;background:#111827;}
+/* REVIEWS */
+.reviews{padding:80px 20px;background:#1f2937;}
 .review-card{
-background:#ffffff;color:#111827;padding:25px;margin:20px auto;
-max-width:600px;border-radius:15px;
-box-shadow:0 8px 25px rgba(0,0,0,0.4);text-align:left;}
-.stars{color:#fbbf24;font-size:18px;margin-bottom:10px;}
-.review-card span{display:block;margin-top:15px;font-weight:bold;color:#444;}
+background:#fff;color:#111;padding:25px;margin:20px auto;
+max-width:600px;border-radius:15px;text-align:left;}
+.stars{color:#fbbf24;}
 
-.faq{padding:80px 20px;background:#0f172a;}
-.faq-item{max-width:700px;margin:15px auto;border-radius:10px;overflow:hidden;}
+/* FAQ */
+.faq{padding:80px 20px;}
+.faq-item{max-width:700px;margin:15px auto;}
 .faq-question{
-width:100%;padding:18px;border:none;background:#1f2937;color:white;
-text-align:left;font-size:16px;cursor:pointer;
-display:flex;justify-content:space-between;align-items:center;}
+width:100%;padding:18px;border:none;
+background:#374151;color:white;
+display:flex;justify-content:space-between;cursor:pointer;}
 .faq-answer{
-max-height:0;overflow:hidden;background:#111827;
-transition:max-height 0.4s ease;padding:0 18px;text-align:left;}
+max-height:0;overflow:hidden;
+background:#111827;transition:0.4s;text-align:left;padding:0 18px;}
 .faq-answer p{padding:15px 0;}
-.icon{font-size:20px;font-weight:bold;}
+.icon{font-size:20px;}
 
+/* WhatsApp */
 .whatsapp-float{
 position:fixed;bottom:25px;right:25px;
-background:#25D366;color:white;font-size:28px;
-width:60px;height:60px;display:flex;
-align-items:center;justify-content:center;
-border-radius:50%;text-decoration:none;
-box-shadow:0 0 20px rgba(37,211,102,0.8);
-z-index:999;}
+background:#25D366;color:white;
+width:60px;height:60px;
+display:flex;align-items:center;justify-content:center;
+border-radius:50%;text-decoration:none;font-size:28px;}
 
 @keyframes logoFloat{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);}}
-@keyframes auraPulse{0%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}
-50%{opacity:1; transform:translate(-50%,-50%) scale(1.1);}
-100%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}}
+@keyframes auraPulse{0%{opacity:0.6;}50%{opacity:1;}100%{opacity:0.6;}}
 </style>
 </head>
 
@@ -94,22 +92,17 @@ z-index:999;}
 
 <div class="hero">
 <div class="logo-wrapper">
-<img src="./logo.png" class="logo">
+<img src="logo.png" class="logo">
 </div>
 </div>
 
 <div class="content-section">
-<img src="./cow.png">
+<img src="cow.png">
 <div class="center-text">
 🐄 గోవు శాంతి & పోషక శక్తి<br><br>
 🦁 సింహం శక్తి & అంతరంగ బలం
 </div>
-<img src="./lion.png">
-</div>
-
-<div class="power-banner">
-శాంతి శక్తిని స్వీకరించండి.
-<span class="english">Balance peace within, awaken the power inside you.</span>
+<img src="lion.png">
 </div>
 
 <div class="meditation-caption">
@@ -117,49 +110,69 @@ Silence the mind and balance your energy.<br>
 Discover your true self through meditation.
 </div>
 
-<!-- UPDATED PAYMENT PAGE LINK -->
+<!-- MAIN COURSE BUTTON -->
 <a href="https://rzp.io/rzp/k3KEs0L" target="_blank" class="button">
 ఇప్పుడే చేరండి
 </a>
 
-<a href="SaiDeva_Meditation_Telugu_Fixed.pdf" target="_blank" class="pdf-button">
-<span class="free-tag">FREE GUIDE</span><br>
-📖 Shanti Shakti Ana Pana Meditation
-</a>
+<!-- COURSES SECTION -->
+<section class="courses">
+<h2>📚 Our Meditation Courses</h2>
+<div class="course-container">
 
-<section class="reviews">
-<h2>⭐ Student Reviews</h2>
-
-<div class="review-card">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"10 rojullo na stress taggindi."</p>
-<span>- Ramesh, Hyderabad</span>
+<div class="course-card">
+<h3>🧘 Shanti Shakti Ana Pana</h3>
+<p>Breathing meditation for peace & balance.</p>
+<div class="price">₹999</div>
+<a href="https://rzp.io/rzp/k3KEs0L" target="_blank" class="course-btn">Enroll</a>
 </div>
 
-<div class="review-card">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Na confidence improve ayyindi."</p>
-<span>- Lakshmi, Vijayawada</span>
+<div class="course-card">
+<h3>🔥 21-Day Mind Mastery</h3>
+<p>Step-by-step transformation journey.</p>
+<div class="price">₹1999</div>
+<a href="YOUR_21DAY_LINK" target="_blank" class="course-btn">Enroll</a>
 </div>
 
+<div class="course-card">
+<h3>🌿 Peace Activation</h3>
+<p>Emotional healing intensive program.</p>
+<div class="price">₹1499</div>
+<a href="YOUR_PEACE_LINK" target="_blank" class="course-btn">Enroll</a>
+</div>
+
+<div class="course-card">
+<h3>⚡ Energy Awakening</h3>
+<p>Advanced spiritual activation course.</p>
+<div class="price">₹2999</div>
+<a href="YOUR_ADVANCED_LINK" target="_blank" class="course-btn">Enroll</a>
+</div>
+
+</div>
 </section>
 
+<!-- REVIEWS -->
+<section class="reviews">
+<h2>⭐ Student Reviews</h2>
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Na stress taggindi."</p>
+<span>- Ramesh</span>
+</div>
+</section>
+
+<!-- FAQ -->
 <section class="faq">
-<h2>❓ Frequently Asked Questions</h2>
+<h2>❓ FAQ</h2>
 
 <div class="faq-item">
 <button class="faq-question">Beginners ki suitable aa? <span class="icon">+</span></button>
-<div class="faq-answer"><p>Avunu. Beginners ki simple ga design chesaru.</p></div>
+<div class="faq-answer"><p>Avunu. Beginners ki suitable.</p></div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Daily entha time practice? <span class="icon">+</span></button>
-<div class="faq-answer"><p>12–15 minutes daily saripothundi.</p></div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">Payment secure aa? <span class="icon">+</span></button>
-<div class="faq-answer"><p>Avunu. Razorpay secure gateway use chestunnam.</p></div>
+<button class="faq-question">Daily entha time? <span class="icon">+</span></button>
+<div class="faq-answer"><p>12–15 minutes saripothundi.</p></div>
 </div>
 
 </section>
@@ -167,18 +180,16 @@ Discover your true self through meditation.
 <a href="https://wa.me/918985178989" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
-document.querySelectorAll(".faq-question").forEach(button => {
-button.addEventListener("click", () => {
-const answer = button.nextElementSibling;
-const icon = button.querySelector(".icon");
+document.querySelectorAll(".faq-question").forEach(button=>{
+button.addEventListener("click",()=>{
+const answer=button.nextElementSibling;
+const icon=button.querySelector(".icon");
 if(answer.style.maxHeight){
-answer.style.maxHeight = null;
-icon.textContent = "+";
-} else {
-document.querySelectorAll(".faq-answer").forEach(a => a.style.maxHeight = null);
-document.querySelectorAll(".icon").forEach(i => i.textContent = "+");
-answer.style.maxHeight = answer.scrollHeight + "px";
-icon.textContent = "−";
+answer.style.maxHeight=null;
+icon.textContent="+";
+}else{
+answer.style.maxHeight=answer.scrollHeight+"px";
+icon.textContent="−";
 }
 });
 });
