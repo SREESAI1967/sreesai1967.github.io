@@ -9,245 +9,83 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans Telugu', sans-serif;}
-
-body{
-background:linear-gradient(135deg,#0f0f1a,#111827,#1a1a2e);
-color:white;
-text-align:center;
-}
+body{background:linear-gradient(135deg,#0f0f1a,#111827,#1a1a2e);color:white;text-align:center;}
 
 /* HERO */
 .hero{padding:100px 20px 40px;}
-
 .logo-wrapper{position:relative;display:inline-block;}
-
 .logo-wrapper::before{
-content:"";
-position:absolute;
-top:50%;left:50%;
+content:"";position:absolute;top:50%;left:50%;
 transform:translate(-50%,-50%);
 width:280px;height:280px;
 background:radial-gradient(circle, rgba(0,245,160,0.4) 0%, rgba(0,217,245,0.3) 40%, transparent 70%);
-border-radius:50%;
-z-index:0;
-animation:auraPulse 4s ease-in-out infinite;
-}
-
-.logo{
-width:200px;
-position:relative;
-z-index:1;
-animation:logoFloat 3s ease-in-out infinite;
-}
+border-radius:50%;z-index:0;
+animation:auraPulse 4s ease-in-out infinite;}
+.logo{width:200px;position:relative;z-index:1;animation:logoFloat 3s ease-in-out infinite;}
 
 /* CONTENT */
-.content-section{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:30px;
-padding:60px 20px;
-max-width:1200px;
-margin:auto;
-flex-wrap:wrap;
-}
-
-.content-section img{
-width:300px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-transition:0.4s;
-}
-
-.content-section img:hover{
-transform:scale(1.05);
-box-shadow:0 15px 40px rgba(251,191,36,0.8);
-}
-
-.center-text{
-flex:1;
-min-width:280px;
-font-size:18px;
-line-height:1.7;
-}
+.content-section{display:flex;align-items:center;justify-content:space-between;
+gap:30px;padding:60px 20px;max-width:1200px;margin:auto;flex-wrap:wrap;}
+.content-section img{width:300px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+.center-text{flex:1;min-width:280px;font-size:18px;line-height:1.7;}
 
 /* POWER STRIP */
-.power-banner{
-width:100%;
-background:linear-gradient(90deg,#ffe8a3,#ffc76b);
-color:#222;
-padding:15px 10px;
-font-size:20px;
-font-weight:600;
-font-family:'Cinzel', serif;
-margin-top:40px;
-}
-
-.power-banner .english{
-display:block;
-font-size:15px;
-margin-top:5px;
-}
+.power-banner{width:100%;background:linear-gradient(90deg,#ffe8a3,#ffc76b);
+color:#222;padding:15px 10px;font-size:20px;font-weight:600;font-family:'Cinzel', serif;margin-top:40px;}
+.power-banner .english{display:block;font-size:15px;margin-top:5px;}
 
 /* GLOWING CAPTION */
 .meditation-caption{
-max-width:900px;
-margin:60px auto 40px;
-font-size:30px;
-font-family:'Playfair Display', serif;
-font-weight:700;
+max-width:900px;margin:60px auto 40px;font-size:30px;
+font-family:'Playfair Display', serif;font-weight:700;
 text-shadow:0 0 10px rgba(255,255,255,0.6),
-            0 0 20px rgba(0,245,160,0.6),
-            0 0 40px rgba(0,217,245,0.6);
-}
+0 0 20px rgba(0,245,160,0.6),
+0 0 40px rgba(0,217,245,0.6);}
 
 /* BUTTONS */
 .button{
 background:linear-gradient(45deg,#fbbf24,#f97316);
-color:#0f172a;
-padding:18px 55px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-margin-top:20px;
-transition:0.3s;
-}
-
-.button:hover{
-transform:scale(1.08);
-box-shadow:0 0 30px rgba(251,191,36,0.9);
-}
+color:#0f172a;padding:18px 55px;border-radius:50px;
+text-decoration:none;font-weight:bold;display:inline-block;margin-top:20px;}
 
 .pdf-button{
-display:inline-block;
-margin-top:25px;
+display:inline-block;margin-top:25px;
 background:linear-gradient(90deg,#00f5a0,#00d9f5);
-color:#0f172a;
-padding:18px 45px;
-border-radius:20px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.pdf-button:hover{
-transform:scale(1.08);
-box-shadow:0 0 25px rgba(0,217,245,0.8);
-}
-
+color:#0f172a;padding:18px 45px;border-radius:20px;
+text-decoration:none;font-weight:bold;}
 .free-tag{
-display:inline-block;
-background:#fbbf24;
-color:#111827;
-padding:4px 12px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:8px;
-}
+display:inline-block;background:#fbbf24;color:#111827;
+padding:4px 12px;border-radius:20px;font-size:12px;font-weight:bold;margin-bottom:8px;}
 
 /* EMAIL */
-.email-section{
-padding:80px 20px;
-background:#0f172a;
-}
-
-.email-section input{
-padding:12px;
-width:250px;
-border-radius:30px;
-border:none;
-margin-right:10px;
-}
-
-.email-section button{
-padding:12px 30px;
-border-radius:30px;
-border:none;
-background:#fbbf24;
-font-weight:bold;
-cursor:pointer;
-}
-
-.email-section button:hover{
-background:#f97316;
-}
+.email-section{padding:80px 20px;background:#0f172a;}
+.email-section input{padding:14px;width:260px;border-radius:30px;border:none;margin-right:10px;}
+.email-section button{padding:14px 35px;border-radius:30px;border:none;background:#fbbf24;font-weight:bold;cursor:pointer;}
 
 /* TESTIMONIALS */
-.testimonials{
-padding:80px 20px;
-background:#111827;
-}
-
-.testimonial-box{
-background:rgba(255,255,255,0.05);
-padding:25px;
-margin:20px auto;
-max-width:600px;
-border-radius:15px;
-}
-
-.testimonial-box span{
-display:block;
-margin-top:15px;
-color:#fbbf24;
-font-weight:bold;
-}
+.testimonials{padding:80px 20px;background:#111827;}
+.testimonial-box{background:rgba(255,255,255,0.05);padding:25px;margin:20px auto;max-width:600px;border-radius:15px;}
+.testimonial-box span{display:block;margin-top:15px;color:#fbbf24;font-weight:bold;}
 
 /* FAQ */
-.faq{
-padding:80px 20px;
-}
+.faq{padding:80px 20px;}
+.faq-item{max-width:700px;margin:20px auto;background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;text-align:left;}
+.faq-item h4{color:#fbbf24;margin-bottom:10px;}
 
-.faq-item{
-max-width:700px;
-margin:20px auto;
-background:rgba(255,255,255,0.05);
-padding:20px;
-border-radius:10px;
-text-align:left;
-}
-
-.faq-item h4{
-color:#fbbf24;
-margin-bottom:10px;
-}
-
-/* WhatsApp */
+/* WhatsApp Floating */
 .whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-font-size:28px;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-text-decoration:none;
+position:fixed;bottom:25px;right:25px;
+background:#25D366;color:white;font-size:28px;
+width:60px;height:60px;display:flex;
+align-items:center;justify-content:center;
+border-radius:50%;text-decoration:none;
 box-shadow:0 0 20px rgba(37,211,102,0.8);
-z-index:999;
-}
+z-index:999;}
 
-.whatsapp-float:hover{
-transform:scale(1.1);
-}
-
-@keyframes logoFloat{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
-}
-
-@keyframes auraPulse{
-0%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}
+@keyframes logoFloat{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);}}
+@keyframes auraPulse{0%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}
 50%{opacity:1; transform:translate(-50%,-50%) scale(1.1);}
-100%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}
-}
+100%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}}
 </style>
 </head>
 
@@ -287,24 +125,23 @@ Discover your true self through meditation.
 📖 Shanti Shakti Ana Pana Meditation
 </a>
 
-<!-- EMAIL CAPTURE SECTION -->
 <section class="email-section">
 <h2>📩 Get Free Meditation Updates</h2>
-<p>Receive spiritual guidance and meditation updates directly to your inbox.</p>
 
-<form action="https://formsubmit.co/maddururaja1967@gmail.com" method="POST">
+<form id="emailForm" action="https://formsubmit.co/maddururaja1967@gmail.com" method="POST">
 
-    <!-- Prevent Spam -->
-    <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="🙏 Welcome to Shanti Shakti Meditation">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_autoresponse" 
+value="🙏 Thank you for joining Shanti Shakti Ana Pana Meditation.
 
-    <!-- Redirect after submit -->
-    <input type="hidden" name="_next" value="https://saidevameditation.shop/thankyou.html">
+Practice daily for 15 minutes and experience inner peace & power.
 
-    <!-- Email Field -->
-    <input type="email" name="email" placeholder="Enter your email" required>
+Visit: https://saidevameditation.shop">
 
-    <!-- Submit Button -->
-    <button type="submit">Subscribe</button>
+<input type="email" name="email" placeholder="Enter your email" required>
+<button type="submit">Subscribe</button>
 
 </form>
 </section>
@@ -326,6 +163,14 @@ Discover your true self through meditation.
 </section>
 
 <a href="https://wa.me/918985178989" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+document.getElementById("emailForm").addEventListener("submit", function(){
+setTimeout(function(){
+window.open("https://wa.me/918985178989?text=🙏 I have subscribed to Shanti Shakti Meditation. Please guide me further.", "_blank");
+}, 2000);
+});
+</script>
 
 </body>
 </html>
