@@ -3,109 +3,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment Successful - Sai Deva Meditation</title>
+<title>Sai Deva Meditation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Cinzel:wght@600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-margin:0;
-padding:0;
-background:linear-gradient(135deg,#0f172a,#111827,#1a1a2e);
-color:white;
-font-family:'Noto Sans Telugu', sans-serif;
-text-align:center;
-padding:100px 20px;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans Telugu', sans-serif;}
+body{background:linear-gradient(135deg,#0f0f1a,#111827,#1a1a2e);color:white;text-align:center;}
 
-.container{
-max-width:600px;
-margin:auto;
-background:rgba(255,255,255,0.05);
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 40px rgba(0,0,0,0.6);
-}
+/* HERO */
+.hero{padding:100px 20px 40px;}
+.logo-wrapper{position:relative;display:inline-block;}
+.logo-wrapper::before{
+content:"";position:absolute;top:50%;left:50%;
+transform:translate(-50%,-50%);
+width:280px;height:280px;
+background:radial-gradient(circle, rgba(0,245,160,0.4) 0%, rgba(0,217,245,0.3) 40%, transparent 70%);
+border-radius:50%;z-index:0;
+animation:auraPulse 4s ease-in-out infinite;}
+.logo{width:200px;position:relative;z-index:1;animation:logoFloat 3s ease-in-out infinite;}
 
-h1{
-color:#22c55e;
-font-size:32px;
-margin-bottom:20px;
-}
+.content-section{display:flex;align-items:center;justify-content:space-between;
+gap:30px;padding:60px 20px;max-width:1200px;margin:auto;flex-wrap:wrap;}
+.content-section img{width:300px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+.center-text{flex:1;min-width:280px;font-size:18px;line-height:1.7;}
 
-p{
-margin:15px 0;
-line-height:1.6;
-}
+.power-banner{width:100%;background:linear-gradient(90deg,#ffe8a3,#ffc76b);
+color:#222;padding:15px 10px;font-size:20px;font-weight:600;font-family:'Cinzel', serif;margin-top:40px;}
+.power-banner .english{display:block;font-size:15px;margin-top:5px;}
 
-.whatsapp-btn{
-display:inline-block;
-margin-top:30px;
-background:#25D366;
-color:white;
-padding:15px 40px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
+.meditation-caption{
+max-width:900px;margin:60px auto 40px;font-size:30px;
+font-family:'Playfair Display', serif;font-weight:700;
+text-shadow:0 0 10px rgba(255,255,255,0.6),
+0 0 20px rgba(0,245,160,0.6),
+0 0 40px rgba(0,217,245,0.6);}
+
+.button{
+background:linear-gradient(45deg,#fbbf24,#f97316);
+color:#0f172a;padding:18px 55px;border-radius:50px;
+text-decoration:none;font-weight:bold;display:inline-block;margin-top:20px;}
+
+.pdf-button{
+display:inline-block;margin-top:25px;
+background:linear-gradient(90deg,#00f5a0,#00d9f5);
+color:#0f172a;padding:18px 45px;border-radius:20px;
+text-decoration:none;font-weight:bold;}
+
+.free-tag{
+display:inline-block;background:#fbbf24;color:#111827;
+padding:4px 12px;border-radius:20px;font-size:12px;font-weight:bold;margin-bottom:8px;}
+
+.reviews{padding:80px 20px;background:#111827;}
+.review-card{
+background:#ffffff;color:#111827;padding:25px;margin:20px auto;
+max-width:600px;border-radius:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.4);text-align:left;}
+.stars{color:#fbbf24;font-size:18px;margin-bottom:10px;}
+.review-card span{display:block;margin-top:15px;font-weight:bold;color:#444;}
+
+.faq{padding:80px 20px;background:#0f172a;}
+.faq-item{max-width:700px;margin:15px auto;border-radius:10px;overflow:hidden;}
+.faq-question{
+width:100%;padding:18px;border:none;background:#1f2937;color:white;
+text-align:left;font-size:16px;cursor:pointer;
+display:flex;justify-content:space-between;align-items:center;}
+.faq-answer{
+max-height:0;overflow:hidden;background:#111827;
+transition:max-height 0.4s ease;padding:0 18px;text-align:left;}
+.faq-answer p{padding:15px 0;}
+.icon{font-size:20px;font-weight:bold;}
+
+.whatsapp-float{
+position:fixed;bottom:25px;right:25px;
+background:#25D366;color:white;font-size:28px;
+width:60px;height:60px;display:flex;
+align-items:center;justify-content:center;
+border-radius:50%;text-decoration:none;
 box-shadow:0 0 20px rgba(37,211,102,0.8);
-transition:0.3s;
-}
+z-index:999;}
 
-.whatsapp-btn:hover{
-transform:scale(1.08);
-}
-
-.home-btn{
-display:inline-block;
-margin-top:20px;
-background:#fbbf24;
-color:#111827;
-padding:12px 30px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.home-btn:hover{
-background:#f97316;
-}
-
-.note{
-margin-top:25px;
-font-size:14px;
-opacity:0.8;
-}
+@keyframes logoFloat{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);}}
+@keyframes auraPulse{0%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}
+50%{opacity:1; transform:translate(-50%,-50%) scale(1.1);}
+100%{opacity:0.6; transform:translate(-50%,-50%) scale(1);}}
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-<h1>🙏 Payment Successful</h1>
-
-<p>Thank you for joining <strong>Shanti Shakti Ana Pana Meditation</strong>.</p>
-
-<p>Your payment has been received successfully.</p>
-
-<p>Please click below to receive your access and further guidance.</p>
-
-<a href="https://wa.me/918985178989?text=🙏 I have completed payment for Shanti Shakti Meditation. Please give me access."
-class="whatsapp-btn" target="_blank">
-💬 Get Access on WhatsApp
-</a>
-
-<div class="note">
-You will receive further guidance and support via WhatsApp.
+<div class="hero">
+<div class="logo-wrapper">
+<img src="./logo.png" class="logo">
+</div>
 </div>
 
-<br>
+<div class="content-section">
+<img src="./cow.png">
+<div class="center-text">
+🐄 గోవు శాంతి & పోషక శక్తి<br><br>
+🦁 సింహం శక్తి & అంతరంగ బలం
+</div>
+<img src="./lion.png">
+</div>
 
-<a href="index.html" class="home-btn">
-⬅ Back to Home
+<div class="power-banner">
+శాంతి శక్తిని స్వీకరించండి.
+<span class="english">Balance peace within, awaken the power inside you.</span>
+</div>
+
+<div class="meditation-caption">
+Silence the mind and balance your energy.<br>
+Discover your true self through meditation.
+</div>
+
+<!-- UPDATED PAYMENT PAGE LINK -->
+<a href="https://rzp.io/rzp/k3KEs0L" target="_blank" class="button">
+ఇప్పుడే చేరండి
 </a>
 
+<a href="SaiDeva_Meditation_Telugu_Fixed.pdf" target="_blank" class="pdf-button">
+<span class="free-tag">FREE GUIDE</span><br>
+📖 Shanti Shakti Ana Pana Meditation
+</a>
+
+<section class="reviews">
+<h2>⭐ Student Reviews</h2>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"10 rojullo na stress taggindi."</p>
+<span>- Ramesh, Hyderabad</span>
 </div>
+
+<div class="review-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Na confidence improve ayyindi."</p>
+<span>- Lakshmi, Vijayawada</span>
+</div>
+
+</section>
+
+<section class="faq">
+<h2>❓ Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<button class="faq-question">Beginners ki suitable aa? <span class="icon">+</span></button>
+<div class="faq-answer"><p>Avunu. Beginners ki simple ga design chesaru.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Daily entha time practice? <span class="icon">+</span></button>
+<div class="faq-answer"><p>12–15 minutes daily saripothundi.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Payment secure aa? <span class="icon">+</span></button>
+<div class="faq-answer"><p>Avunu. Razorpay secure gateway use chestunnam.</p></div>
+</div>
+
+</section>
+
+<a href="https://wa.me/918985178989" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(button => {
+button.addEventListener("click", () => {
+const answer = button.nextElementSibling;
+const icon = button.querySelector(".icon");
+if(answer.style.maxHeight){
+answer.style.maxHeight = null;
+icon.textContent = "+";
+} else {
+document.querySelectorAll(".faq-answer").forEach(a => a.style.maxHeight = null);
+document.querySelectorAll(".icon").forEach(i => i.textContent = "+");
+answer.style.maxHeight = answer.scrollHeight + "px";
+icon.textContent = "−";
+}
+});
+});
+</script>
 
 </body>
 </html>
