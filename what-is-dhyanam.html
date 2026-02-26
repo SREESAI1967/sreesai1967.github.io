@@ -8,17 +8,43 @@
 <style>
 body{
 margin:0;
+overflow:hidden;
 }
+
+/* PDF Full Screen */
 iframe{
 width:100%;
 height:100vh;
 border:none;
+}
+
+/* Back Button */
+.back-btn{
+position:fixed;
+top:20px;
+left:20px;
+background:#FFD700;
+color:black;
+padding:10px 18px;
+border-radius:8px;
+font-weight:600;
+text-decoration:none;
+z-index:999;
+box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
+
+.back-btn:hover{
+background:#C9A227;
 }
 </style>
 
 </head>
 
 <body>
+
+<a href="dyanam-gurinchi.html" class="back-btn">
+⬅ వెనుకకు
+</a>
 
 <iframe src="what-is-dhyanam.pdf"></iframe>
 
