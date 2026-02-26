@@ -38,6 +38,7 @@ top:150px;
 display:flex;
 flex-direction:column;
 gap:15px;
+z-index:50;
 }
 
 .left-buttons{
@@ -124,6 +125,30 @@ font-size:14px;
 opacity:0.8;
 }
 
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+position: fixed;
+width: 60px;
+height: 60px;
+bottom: 25px;
+right: 25px;
+background-color: #25D366;
+color: white;
+border-radius: 50%;
+text-align: center;
+font-size: 28px;
+line-height: 60px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+z-index: 100;
+transition: 0.3s;
+text-decoration: none;
+}
+
+.whatsapp-float:hover {
+background-color: #1ebe5d;
+transform: scale(1.1);
+}
+
 /* MOBILE */
 @media(max-width:900px){
 .side-buttons{
@@ -201,6 +226,11 @@ font-size:28px;
 <footer>
 © 2026 Sai Deva Meditation | Peace • Power • Influence
 </footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918985178989" target="_blank" class="whatsapp-float">
+💬
+</a>
 
 </body>
 </html>
