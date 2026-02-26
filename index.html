@@ -16,7 +16,7 @@ background:linear-gradient(135deg,#061421,#0B1C2D,#123B5A);
 color:white;
 }
 
-/* HEADER WITH AURA LOGO */
+/* HEADER */
 header{
 text-align:center;
 padding:50px 20px;
@@ -55,6 +55,40 @@ animation:pulseAura 3s infinite ease-in-out;
 0%{transform:translate(-50%,-50%) scale(1); opacity:0.7;}
 50%{transform:translate(-50%,-50%) scale(1.15); opacity:1;}
 100%{transform:translate(-50%,-50%) scale(1); opacity:0.7;}
+}
+
+/* SIDE BUTTONS */
+.side-buttons{
+position:fixed;
+top:180px;
+display:flex;
+flex-direction:column;
+gap:15px;
+z-index:50;
+}
+
+.left-buttons{
+left:20px;
+}
+
+.right-buttons{
+right:20px;
+}
+
+.side-buttons a{
+background:linear-gradient(135deg,#132C44,#1b4063);
+color:white;
+padding:12px 16px;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.side-buttons a:hover{
+background:#FFD700;
+color:black;
 }
 
 /* HERO */
@@ -117,29 +151,31 @@ margin-top:0;
 color:#FFD700;
 }
 
-/* BOTTOM BUTTONS (3 ONLY) */
-.bottom-buttons{
+/* BOTTOM STRIPS (3 ONLY) */
+.bottom-strips{
+margin-top:60px;
+}
+
+.strip{
+padding:20px;
 text-align:center;
-padding:50px 20px;
+font-size:18px;
+font-weight:500;
 }
 
-.bottom-buttons a{
-display:inline-block;
-margin:15px;
-padding:14px 30px;
-background:#C9A227;
-color:black;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-transition:0.3s;
+.strip1{
+background:#123B5A;
 }
 
-.bottom-buttons a:hover{
-background:#FFD700;
+.strip2{
+background:#0f2f47;
 }
 
-/* WHATSAPP FLOAT */
+.strip3{
+background:#0b253a;
+}
+
+/* WHATSAPP */
 .whatsapp-float {
 position: fixed;
 width: 65px;
@@ -165,6 +201,9 @@ transform: scale(1.1);
 
 /* MOBILE */
 @media(max-width:900px){
+.side-buttons{
+display:none;
+}
 .hero h1{
 font-size:28px;
 }
@@ -182,67 +221,76 @@ height:240px;
 
 <body>
 
-<!-- HEADER WITH AURA LOGO -->
 <header>
 <div class="logo">
 <img src="logo.png" alt="Sai Deva Meditation Logo">
 </div>
 </header>
 
-<!-- HERO -->
+<!-- LEFT BUTTONS -->
+<div class="side-buttons left-buttons">
+<a href="#">Phase 1</a>
+<a href="#">Phase 2</a>
+<a href="#">Phase 3</a>
+<a href="#">Meditation Guide</a>
+<a href="#">Contact</a>
+</div>
+
+<!-- RIGHT BUTTONS -->
+<div class="side-buttons right-buttons">
+<a href="#">21 Days</a>
+<a href="#">Breath Practice</a>
+<a href="#">Heart Power</a>
+<a href="#">Navel Energy</a>
+<a href="#">Join Now</a>
+</div>
+
 <div class="hero">
 <h1>ప్రశాంతత → శక్తి → ప్రభావం</h1>
 <p>
 సాయి దేవ ధ్యాన విధానం ద్వారా మీరు మానసిక ప్రశాంతతను పొందడమే కాకుండా,
 అంతర్గత శక్తిని మేల్కొలిపి ప్రభావవంతమైన వ్యక్తిత్వాన్ని నిర్మించగలరు.
-ఈ యాత్ర మీ జీవితాన్ని కొత్త స్థాయికి తీసుకెళ్తుంది.
 </p>
 </div>
 
-<!-- BENEFITS -->
 <section>
 <h2 class="section-title">ధ్యాన ప్రయోజనాలు</h2>
 
 <div class="card-grid">
-
 <div class="card">
 <h3>🧠 మానసిక స్పష్టత</h3>
-<p>ఆలోచనల నియంత్రణ, దృష్టి కేంద్రీకరణ మరియు నిర్ణయ స్పష్టత పెరుగుతుంది.</p>
+<p>ఆలోచనల నియంత్రణ మరియు నిర్ణయ స్పష్టత పెరుగుతుంది.</p>
 </div>
 
 <div class="card">
 <h3>❤️ భావోద్వేగ స్థిరత్వం</h3>
-<p>కోపం తగ్గి, స్పందనలో పరిపక్వత మరియు భావ సమతుల్యత ఏర్పడుతుంది.</p>
+<p>కోపం తగ్గి భావ సమతుల్యత ఏర్పడుతుంది.</p>
 </div>
 
 <div class="card">
 <h3>🔥 అంతర్గత శక్తి</h3>
-<p>ఆత్మవిశ్వాసం, ధైర్యం మరియు వ్యక్తిత్వ బలం గణనీయంగా పెరుగుతుంది.</p>
+<p>ఆత్మవిశ్వాసం మరియు ధైర్యం పెరుగుతుంది.</p>
 </div>
 
 <div class="card">
 <h3>🌟 ప్రభావవంతమైన ఉనికి</h3>
-<p>నాయకత్వ ధోరణి, స్థిరమైన ఉనికి మరియు ప్రభావవంతమైన వ్యక్తిత్వం నిర్మాణం.</p>
+<p>నాయకత్వ ధోరణి మరియు శక్తివంతమైన వ్యక్తిత్వం.</p>
 </div>
-
 </div>
 </section>
 
-<!-- 3 BOTTOM BUTTONS -->
-<div class="bottom-buttons">
-<a href="#">Start Phase 1</a>
-<a href="#">Join 21 Day Program</a>
-<a href="#">Contact Us</a>
+<!-- 3 BOTTOM STRIPS -->
+<div class="bottom-strips">
+<div class="strip strip1">🌿 ప్రారంభించండి – Phase 1 Meditation</div>
+<div class="strip strip2">🔥 21 రోజుల శక్తి యాత్రలో చేరండి</div>
+<div class="strip strip3">📞 మమ్మల్ని సంప్రదించండి</div>
 </div>
 
 <footer>
 © 2026 Sai Deva Meditation | Peace • Power • Influence
 </footer>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/918985178989" target="_blank" class="whatsapp-float">
-💬
-</a>
+<a href="https://wa.me/918985178989" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
 </html>
