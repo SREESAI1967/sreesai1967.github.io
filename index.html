@@ -16,77 +16,70 @@ background:linear-gradient(135deg,#061421,#0B1C2D,#123B5A);
 color:white;
 }
 
-/* HEADER WITH LARGE CENTER LOGO */
+/* HEADER WITH AURA LOGO */
 header{
 text-align:center;
-padding:40px 20px;
+padding:50px 20px;
 background:#08131f;
 }
 
+.logo{
+position:relative;
+display:inline-block;
+}
+
 .logo img{
-width:260px;   /* Increased size */
+width:260px;
 max-width:90%;
 height:auto;
+position:relative;
+z-index:2;
 }
 
-/* SIDE BUTTONS */
-.side-buttons{
-position:fixed;
-top:180px;
-display:flex;
-flex-direction:column;
-gap:15px;
-z-index:50;
+/* AURA EFFECT */
+.logo::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:320px;
+height:320px;
+background:radial-gradient(circle, rgba(255,215,0,0.5) 0%, rgba(255,215,0,0.2) 40%, rgba(255,215,0,0.05) 70%, transparent 80%);
+border-radius:50%;
+z-index:1;
+animation:pulseAura 3s infinite ease-in-out;
 }
 
-.left-buttons{
-left:20px;
-}
-
-.right-buttons{
-right:20px;
-}
-
-.side-buttons a{
-background:linear-gradient(135deg,#132C44,#1b4063);
-color:white;
-padding:12px 16px;
-border-radius:8px;
-text-decoration:none;
-font-size:14px;
-transition:0.3s;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-.side-buttons a:hover{
-background:#C9A227;
-color:black;
+@keyframes pulseAura{
+0%{transform:translate(-50%,-50%) scale(1); opacity:0.7;}
+50%{transform:translate(-50%,-50%) scale(1.15); opacity:1;}
+100%{transform:translate(-50%,-50%) scale(1); opacity:0.7;}
 }
 
 /* HERO */
 .hero{
 text-align:center;
-padding:110px 20px;
+padding:100px 20px;
 background:linear-gradient(135deg,#0B1C2D,#1a3e5a);
 }
 
 .hero h1{
 font-size:40px;
 margin:0;
-color:#C9A227;
+color:#FFD700;
 }
 
 .hero p{
 margin-top:20px;
 font-size:18px;
-opacity:0.9;
 max-width:800px;
 margin-left:auto;
 margin-right:auto;
 text-align:justify;
 }
 
-/* SECTION */
+/* BENEFITS */
 section{
 padding:80px 20px;
 max-width:1100px;
@@ -97,7 +90,7 @@ margin:auto;
 text-align:center;
 font-size:32px;
 margin-bottom:50px;
-color:#C9A227;
+color:#FFD700;
 }
 
 .card-grid{
@@ -124,12 +117,26 @@ margin-top:0;
 color:#FFD700;
 }
 
-footer{
-background:#061421;
+/* BOTTOM BUTTONS (3 ONLY) */
+.bottom-buttons{
 text-align:center;
-padding:25px;
-font-size:14px;
-opacity:0.8;
+padding:50px 20px;
+}
+
+.bottom-buttons a{
+display:inline-block;
+margin:15px;
+padding:14px 30px;
+background:#C9A227;
+color:black;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+}
+
+.bottom-buttons a:hover{
+background:#FFD700;
 }
 
 /* WHATSAPP FLOAT */
@@ -158,14 +165,15 @@ transform: scale(1.1);
 
 /* MOBILE */
 @media(max-width:900px){
-.side-buttons{
-display:none;
-}
 .hero h1{
 font-size:28px;
 }
 .logo img{
 width:180px;
+}
+.logo::before{
+width:240px;
+height:240px;
 }
 }
 
@@ -174,30 +182,12 @@ width:180px;
 
 <body>
 
-<!-- HEADER -->
+<!-- HEADER WITH AURA LOGO -->
 <header>
 <div class="logo">
 <img src="logo.png" alt="Sai Deva Meditation Logo">
 </div>
 </header>
-
-<!-- LEFT BUTTONS -->
-<div class="side-buttons left-buttons">
-<a href="#">Phase 1</a>
-<a href="#">Phase 2</a>
-<a href="#">Phase 3</a>
-<a href="#">Meditation Guide</a>
-<a href="#">Contact</a>
-</div>
-
-<!-- RIGHT BUTTONS -->
-<div class="side-buttons right-buttons">
-<a href="#">21 Days</a>
-<a href="#">Breath Practice</a>
-<a href="#">Heart Power</a>
-<a href="#">Navel Energy</a>
-<a href="#">Join Now</a>
-</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -237,6 +227,13 @@ width:180px;
 
 </div>
 </section>
+
+<!-- 3 BOTTOM BUTTONS -->
+<div class="bottom-buttons">
+<a href="#">Start Phase 1</a>
+<a href="#">Join 21 Day Program</a>
+<a href="#">Contact Us</a>
+</div>
 
 <footer>
 © 2026 Sai Deva Meditation | Peace • Power • Influence
