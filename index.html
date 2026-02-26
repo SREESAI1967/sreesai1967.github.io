@@ -16,39 +16,71 @@ background:#0B1C2D;
 color:white;
 }
 
+/* HEADER */
 header{
-padding:80px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#091521;
+}
+
+.logo{
+font-size:20px;
+font-weight:600;
+color:#C9A227;
+}
+
+/* SIDE BUTTONS */
+.side-buttons{
+position:fixed;
+top:150px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.left-buttons{
+left:20px;
+}
+
+.right-buttons{
+right:20px;
+}
+
+.side-buttons a{
+background:#132C44;
+color:white;
+padding:10px 15px;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.side-buttons a:hover{
+background:#C9A227;
+}
+
+/* HERO */
+.hero{
 text-align:center;
+padding:120px 20px;
 background:linear-gradient(135deg,#0B1C2D,#123B5A);
 }
 
-header h1{
+.hero h1{
 font-size:38px;
 margin:0;
 }
 
-header p{
+.hero p{
 margin-top:15px;
 font-size:18px;
 opacity:0.9;
 }
 
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 28px;
-background:#C9A227;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#a8841d;
-}
-
+/* SECTION */
 section{
 padding:70px 20px;
 max-width:1100px;
@@ -92,12 +124,13 @@ font-size:14px;
 opacity:0.8;
 }
 
-@media(max-width:600px){
-header h1{
-font-size:28px;
+/* MOBILE */
+@media(max-width:900px){
+.side-buttons{
+display:none;
 }
-.section-title{
-font-size:24px;
+.hero h1{
+font-size:28px;
 }
 }
 
@@ -106,14 +139,36 @@ font-size:24px;
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HEADER WITH LOGO -->
 <header>
-<h1>🌟 సాయి దేవ ధ్యాన విధానం</h1>
-<p>ప్రశాంతత → శక్తి → ప్రభావం</p>
-<a href="#program" class="btn">🚀 Your Journey Begins</a>
+<div class="logo">🌟 Sai Deva Meditation</div>
 </header>
 
-<!-- ABOUT SECTION -->
+<!-- LEFT BUTTONS -->
+<div class="side-buttons left-buttons">
+<a href="#">Phase 1</a>
+<a href="#">Phase 2</a>
+<a href="#">Phase 3</a>
+<a href="#">Meditation Guide</a>
+<a href="#">Contact</a>
+</div>
+
+<!-- RIGHT BUTTONS -->
+<div class="side-buttons right-buttons">
+<a href="#">21 Days</a>
+<a href="#">Breath Practice</a>
+<a href="#">Heart Power</a>
+<a href="#">Navel Energy</a>
+<a href="#">Join Now</a>
+</div>
+
+<!-- HERO SECTION -->
+<div class="hero">
+<h1>ప్రశాంతత → శక్తి → ప్రభావం</h1>
+<p>సాయి దేవ ధ్యాన విధానం ద్వారా అంతర్గత మార్పు ప్రారంభించండి</p>
+</div>
+
+<!-- BENEFITS SECTION -->
 <section>
 <h2 class="section-title">ధ్యాన ప్రయోజనాలు</h2>
 
@@ -140,35 +195,6 @@ font-size:24px;
 </div>
 
 </div>
-</section>
-
-<!-- PROGRAM SECTION -->
-<section id="program">
-<h2 class="section-title">21-రోజుల ధ్యాన యాత్ర</h2>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>🟢 Phase 1 – Calm Foundation</h3>
-<p>Days 1–7: శ్వాస అవగాహన మరియు భావ స్థిరత్వం.</p>
-</div>
-
-<div class="card">
-<h3>🔥 Phase 2 – Power Activation</h3>
-<p>Days 8–14: హృదయ మరియు నాభి శక్తి యాక్టివేషన్.</p>
-</div>
-
-<div class="card">
-<h3>🚀 Phase 3 – Integration</h3>
-<p>Days 15–21: పూర్తి సమగ్ర శక్తి నిర్మాణం.</p>
-</div>
-
-</div>
-
-<div style="text-align:center;">
-<a href="#" class="btn">📘 Start Phase 1</a>
-</div>
-
 </section>
 
 <!-- FOOTER -->
