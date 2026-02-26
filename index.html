@@ -16,25 +16,23 @@ background:#0B1C2D;
 color:white;
 }
 
-/* HEADER */
+/* HEADER WITH CENTER LOGO */
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
+text-align:center;
+padding:30px 20px;
 background:#091521;
 }
 
-.logo{
-font-size:20px;
-font-weight:600;
-color:#C9A227;
+.logo img{
+width:180px;
+max-width:80%;
+height:auto;
 }
 
 /* SIDE BUTTONS */
 .side-buttons{
 position:fixed;
-top:150px;
+top:160px;
 display:flex;
 flex-direction:column;
 gap:15px;
@@ -66,12 +64,12 @@ background:#C9A227;
 /* HERO */
 .hero{
 text-align:center;
-padding:120px 20px;
+padding:100px 20px;
 background:linear-gradient(135deg,#0B1C2D,#123B5A);
 }
 
 .hero h1{
-font-size:38px;
+font-size:36px;
 margin:0;
 }
 
@@ -155,7 +153,10 @@ transform: scale(1.1);
 display:none;
 }
 .hero h1{
-font-size:28px;
+font-size:26px;
+}
+.logo img{
+width:140px;
 }
 }
 
@@ -164,9 +165,11 @@ font-size:28px;
 
 <body>
 
-<!-- HEADER WITH LOGO -->
+<!-- HEADER WITH CENTER LOGO -->
 <header>
-<div class="logo">🌟 Sai Deva Meditation</div>
+<div class="logo">
+<img src="logo.png" alt="Sai Deva Meditation Logo">
+</div>
 </header>
 
 <!-- LEFT BUTTONS -->
