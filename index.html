@@ -12,27 +12,27 @@
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:#0B1C2D;
+background:linear-gradient(135deg,#061421,#0B1C2D,#123B5A);
 color:white;
 }
 
-/* HEADER WITH CENTER LOGO */
+/* HEADER WITH LARGE CENTER LOGO */
 header{
 text-align:center;
-padding:30px 20px;
-background:#091521;
+padding:40px 20px;
+background:#08131f;
 }
 
 .logo img{
-width:180px;
-max-width:80%;
+width:260px;   /* Increased size */
+max-width:90%;
 height:auto;
 }
 
 /* SIDE BUTTONS */
 .side-buttons{
 position:fixed;
-top:160px;
+top:180px;
 display:flex;
 flex-direction:column;
 gap:15px;
@@ -48,77 +48,86 @@ right:20px;
 }
 
 .side-buttons a{
-background:#132C44;
+background:linear-gradient(135deg,#132C44,#1b4063);
 color:white;
-padding:10px 15px;
-border-radius:6px;
+padding:12px 16px;
+border-radius:8px;
 text-decoration:none;
 font-size:14px;
 transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 .side-buttons a:hover{
 background:#C9A227;
+color:black;
 }
 
 /* HERO */
 .hero{
 text-align:center;
-padding:100px 20px;
-background:linear-gradient(135deg,#0B1C2D,#123B5A);
+padding:110px 20px;
+background:linear-gradient(135deg,#0B1C2D,#1a3e5a);
 }
 
 .hero h1{
-font-size:36px;
+font-size:40px;
 margin:0;
+color:#C9A227;
 }
 
 .hero p{
-margin-top:15px;
+margin-top:20px;
 font-size:18px;
 opacity:0.9;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+text-align:justify;
 }
 
 /* SECTION */
 section{
-padding:70px 20px;
+padding:80px 20px;
 max-width:1100px;
 margin:auto;
 }
 
 .section-title{
 text-align:center;
-font-size:30px;
-margin-bottom:40px;
+font-size:32px;
+margin-bottom:50px;
+color:#C9A227;
 }
 
 .card-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
-background:#132C44;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+background:linear-gradient(135deg,#132C44,#183e5c);
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 transition:0.3s;
+text-align:justify;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 .card h3{
 margin-top:0;
-color:#C9A227;
+color:#FFD700;
 }
 
 footer{
-background:#091521;
+background:#061421;
 text-align:center;
-padding:20px;
+padding:25px;
 font-size:14px;
 opacity:0.8;
 }
@@ -126,16 +135,16 @@ opacity:0.8;
 /* WHATSAPP FLOAT */
 .whatsapp-float {
 position: fixed;
-width: 60px;
-height: 60px;
+width: 65px;
+height: 65px;
 bottom: 25px;
 right: 25px;
 background-color: #25D366;
 color: white;
 border-radius: 50%;
 text-align: center;
-font-size: 28px;
-line-height: 60px;
+font-size: 30px;
+line-height: 65px;
 box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 z-index: 100;
 transition: 0.3s;
@@ -153,10 +162,10 @@ transform: scale(1.1);
 display:none;
 }
 .hero h1{
-font-size:26px;
+font-size:28px;
 }
 .logo img{
-width:140px;
+width:180px;
 }
 }
 
@@ -165,7 +174,7 @@ width:140px;
 
 <body>
 
-<!-- HEADER WITH CENTER LOGO -->
+<!-- HEADER -->
 <header>
 <div class="logo">
 <img src="logo.png" alt="Sai Deva Meditation Logo">
@@ -190,13 +199,17 @@ width:140px;
 <a href="#">Join Now</a>
 </div>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div class="hero">
 <h1>ప్రశాంతత → శక్తి → ప్రభావం</h1>
-<p>సాయి దేవ ధ్యాన విధానం ద్వారా అంతర్గత మార్పు ప్రారంభించండి</p>
+<p>
+సాయి దేవ ధ్యాన విధానం ద్వారా మీరు మానసిక ప్రశాంతతను పొందడమే కాకుండా,
+అంతర్గత శక్తిని మేల్కొలిపి ప్రభావవంతమైన వ్యక్తిత్వాన్ని నిర్మించగలరు.
+ఈ యాత్ర మీ జీవితాన్ని కొత్త స్థాయికి తీసుకెళ్తుంది.
+</p>
 </div>
 
-<!-- BENEFITS SECTION -->
+<!-- BENEFITS -->
 <section>
 <h2 class="section-title">ధ్యాన ప్రయోజనాలు</h2>
 
@@ -204,33 +217,32 @@ width:140px;
 
 <div class="card">
 <h3>🧠 మానసిక స్పష్టత</h3>
-<p>ఆలోచనల నియంత్రణ మరియు దృష్టి కేంద్రీకరణ పెరుగుతుంది.</p>
+<p>ఆలోచనల నియంత్రణ, దృష్టి కేంద్రీకరణ మరియు నిర్ణయ స్పష్టత పెరుగుతుంది.</p>
 </div>
 
 <div class="card">
 <h3>❤️ భావోద్వేగ స్థిరత్వం</h3>
-<p>కోపం తగ్గుతుంది. స్పందనలో పరిపక్వత వస్తుంది.</p>
+<p>కోపం తగ్గి, స్పందనలో పరిపక్వత మరియు భావ సమతుల్యత ఏర్పడుతుంది.</p>
 </div>
 
 <div class="card">
 <h3>🔥 అంతర్గత శక్తి</h3>
-<p>ఆత్మవిశ్వాసం మరియు వ్యక్తిత్వ బలం పెరుగుతుంది.</p>
+<p>ఆత్మవిశ్వాసం, ధైర్యం మరియు వ్యక్తిత్వ బలం గణనీయంగా పెరుగుతుంది.</p>
 </div>
 
 <div class="card">
 <h3>🌟 ప్రభావవంతమైన ఉనికి</h3>
-<p>నాయకత్వ ధోరణి మరియు శక్తివంతమైన వ్యక్తిత్వం.</p>
+<p>నాయకత్వ ధోరణి, స్థిరమైన ఉనికి మరియు ప్రభావవంతమైన వ్యక్తిత్వం నిర్మాణం.</p>
 </div>
 
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
 © 2026 Sai Deva Meditation | Peace • Power • Influence
 </footer>
 
-<!-- FLOATING WHATSAPP -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/918985178989" target="_blank" class="whatsapp-float">
 💬
 </a>
