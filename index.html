@@ -5,164 +5,305 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sai Deva Meditation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- English Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Telugu Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+
 body{
-    margin:0;
-    font-family:'Noto Sans Telugu', sans-serif;
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    text-align:center;
+margin:0;
+font-family:'Poppins','Noto Sans Telugu',sans-serif;
+background:linear-gradient(135deg,#061421,#0B1C2D,#123B5A);
+color:white;
 }
 
-/* Center Content */
-.center{
-    padding:60px 20px 40px;
+/* HEADER */
+header{
+text-align:center;
+padding:50px 20px;
+background:#08131f;
 }
 
 .logo{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:radial-gradient(circle,#FFD700,#ff9900);
-    margin:auto;
-    box-shadow:0 0 40px #FFD700;
-    animation:glow 2s infinite alternate;
+position:relative;
+display:inline-block;
 }
 
-@keyframes glow{
-    from{box-shadow:0 0 20px #FFD700;}
-    to{box-shadow:0 0 60px #FFD700;}
+.logo img{
+width:260px;
+max-width:90%;
+height:auto;
+position:relative;
+z-index:2;
 }
 
-h1{
-    margin-top:20px;
-    font-size:34px;
-    color:#FFD700;
+/* AURA EFFECT */
+.logo::before{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:320px;
+height:320px;
+background:radial-gradient(circle, rgba(255,215,0,0.5) 0%, rgba(255,215,0,0.2) 40%, rgba(255,215,0,0.05) 70%, transparent 80%);
+border-radius:50%;
+z-index:1;
+animation:pulseAura 3s infinite ease-in-out;
 }
 
-.subtitle{
-    font-size:18px;
-    margin-top:10px;
+@keyframes pulseAura{
+0%{transform:translate(-50%,-50%) scale(1); opacity:0.7;}
+50%{transform:translate(-50%,-50%) scale(1.15); opacity:1;}
+100%{transform:translate(-50%,-50%) scale(1); opacity:0.7;}
 }
 
-/* Benefit Cards */
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:40px;
+/* SIDE BUTTONS */
+.side-buttons{
+position:fixed;
+top:180px;
+display:flex;
+flex-direction:column;
+gap:15px;
+z-index:50;
+}
+
+.left-buttons{
+left:20px;
+}
+
+.right-buttons{
+right:20px;
+}
+
+.side-buttons a{
+background:linear-gradient(135deg,#132C44,#1b4063);
+color:white;
+padding:12px 16px;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.side-buttons a:hover{
+background:#FFD700;
+color:black;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:80px 20px 100px 20px;
+background:linear-gradient(135deg,#0B1C2D,#1a3e5a);
+}
+
+/* MAIN HEADING */
+.main-heading{
+font-size:48px;
+font-weight:600;
+letter-spacing:2px;
+margin:0;
+}
+
+.gold{
+color:#FFD700;
+}
+
+.white{
+color:#ffffff;
+}
+
+/* SUB HEADING (TELUGU FONT APPLIED) */
+.sub-heading{
+font-size:24px;
+margin-top:15px;
+color:#C9A227;
+font-weight:400;
+letter-spacing:1px;
+font-family:'Noto Sans Telugu',sans-serif;
+}
+
+/* SECTION */
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:50px;
+color:#FFD700;
+font-family:'Noto Sans Telugu',sans-serif;
+}
+
+.card-grid{
+display:flex;
+justify-content:center;
+gap:30px;
 }
 
 .card{
-    background:rgba(255,255,255,0.08);
-    padding:20px;
-    margin:10px;
-    border-radius:12px;
-    width:260px;
-    box-shadow:0 0 20px rgba(255,215,0,0.2);
+background:linear-gradient(135deg,#132C44,#183e5c);
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:0.3s;
+text-align:justify;
+flex:0 0 300px;
+font-family:'Noto Sans Telugu',sans-serif;
 }
 
-/* Side Buttons */
-.side-left, .side-right{
-    position:fixed;
-    top:30%;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+.card:hover{
+transform:translateY(-10px);
 }
 
-.side-left{ left:10px; }
-.side-right{ right:10px; }
-
-.side-btn{
-    background:#FFD700;
-    color:black;
-    padding:10px 14px;
-    border-radius:8px;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:bold;
-    box-shadow:0 0 10px rgba(255,215,0,0.5);
+.card h3{
+margin-top:0;
+color:#FFD700;
 }
 
-/* WhatsApp Button */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:12px 18px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 0 15px rgba(0,0,0,0.4);
+/* FOOTER */
+footer{
+background:#061421;
+text-align:center;
+padding:25px;
+font-size:14px;
+opacity:0.8;
 }
 
-/* Responsive */
-@media(max-width:768px){
-    .side-left, .side-right{
-        position:static;
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content:center;
-        margin-top:20px;
-    }
+/* WHATSAPP */
+.whatsapp-float {
+position: fixed;
+width: 65px;
+height: 65px;
+bottom: 25px;
+right: 25px;
+background-color: #25D366;
+color: white;
+border-radius: 50%;
+text-align: center;
+font-size: 30px;
+line-height: 65px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+z-index: 100;
+transition: 0.3s;
+text-decoration: none;
 }
+
+.whatsapp-float:hover {
+background-color: #1ebe5d;
+transform: scale(1.1);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.side-buttons{
+display:none;
+}
+
+.logo img{
+width:180px;
+}
+
+.logo::before{
+width:240px;
+height:240px;
+}
+
+.main-heading{
+font-size:32px;
+}
+
+.sub-heading{
+font-size:18px;
+}
+
+.card-grid{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="center">
-<div class="logo"></div>
-
-<h1>Sai Deva Meditation</h1>
-<p class="subtitle">ప్రశాంతత → శక్తి → ప్రభావం</p>
-
-<div class="cards">
-    <div class="card">
-        <h3>🧠 మానసిక స్పష్టత</h3>
-        <p>ధ్యానం ద్వారా మనసు ప్రశాంతంగా మరియు స్పష్టంగా మారుతుంది.</p>
-    </div>
-
-    <div class="card">
-        <h3>❤️ భావోద్వేగ స్థిరత్వం</h3>
-        <p>అంతర్గత శాంతి మరియు భావ నియంత్రణ పెరుగుతుంది.</p>
-    </div>
-
-    <div class="card">
-        <h3>🌟 ప్రభావవంతమైన ఉనికి</h3>
-        <p>వ్యక్తిత్వంలో ప్రభావం మరియు ఆత్మవిశ్వాసం పెరుగుతుంది.</p>
-    </div>
+<header>
+<div class="logo">
+<img src="logo.png" alt="Sai Deva Meditation Logo">
 </div>
+</header>
+
+<!-- LEFT BUTTONS -->
+<div class="side-buttons left-buttons">
+<a href="dyanam-gurinchi.html">ధ్యానం గురించి</a>
+<a href="#">Phase 2</a>
+<a href="#">Phase 3</a>
+<a href="#">Meditation Guide</a>
+<a href="#">Contact</a>
 </div>
 
-<!-- Left Side Buttons -->
-<div class="side-left">
-    <a href="dyanam-gurinchi.html" class="side-btn">ధ్యానం గురించి</a>
-    <a href="anapana-dhyanam.html" class="side-btn">ఆనాపాన ధ్యానం</a>
-    <a href="mindfulness-dhyanam.html" class="side-btn">మైండ్‌ఫుల్‌నెస్</a>
-    <a href="vipassana.html" class="side-btn">విపశ్యన</a>
-    <a href="chakra-dhyanam.html" class="side-btn">చక్ర ధ్యానం</a>
+<!-- RIGHT BUTTONS -->
+<div class="side-buttons right-buttons">
+<a href="#">21 Days</a>
+<a href="#">Breath Practice</a>
+<a href="#">Heart Power</a>
+<a href="#">Navel Energy</a>
+<a href="#">Join Now</a>
 </div>
 
-<!-- Right Side Buttons -->
-<div class="side-right">
-    <a href="mantra-dhyanam.html" class="side-btn">మంత్ర ధ్యానం</a>
-    <a href="body-scan.html" class="side-btn">బాడీ స్కాన్</a>
-    <a href="focused-attention.html" class="side-btn">ఫోకస్ ధ్యానం</a>
-    <a href="loving-kindness.html" class="side-btn">లవింగ్ కైండ్‌నెస్</a>
-    <a href="sai-deva-21days.html" class="side-btn">
-        🌿 Sai Deva 21 Days Meditation Journey
-    </a>
+<div class="hero">
+
+<h1 class="main-heading">
+  <span class="gold">Sai Deva</span> 
+  <span class="white">Meditation</span>
+</h1>
+
+<h2 class="sub-heading">
+  ప్రశాంతత → శక్తి → ప్రభావం
+</h2>
+
 </div>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/918985178989" target="_blank" class="whatsapp">
-    WhatsApp
+<section>
+<h2 class="section-title">ధ్యాన ప్రయోజనాలు</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>🧠 మానసిక స్పష్టత</h3>
+<p>ఆలోచనల నియంత్రణ మరియు నిర్ణయ స్పష్టత పెరుగుతుంది.</p>
+</div>
+
+<div class="card">
+<h3>❤️ భావోద్వేగ స్థిరత్వం</h3>
+<p>కోపం తగ్గి భావ సమతుల్యత ఏర్పడుతుంది.</p>
+</div>
+
+<div class="card">
+<h3>🌟 ప్రభావవంతమైన ఉనికి</h3>
+<p>నాయకత్వ ధోరణి మరియు శక్తివంతమైన వ్యక్తిత్వం.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Sai Deva Meditation | Peace • Power • Influence
+</footer>
+
+<a href="https://wa.me/918985178989" target="_blank" class="whatsapp-float">
+💬
 </a>
 
 </body>
