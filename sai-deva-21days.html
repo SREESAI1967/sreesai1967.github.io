@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Deva 21 Days Meditation Journey</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins','Noto Sans Telugu',sans-serif;
+background:linear-gradient(135deg,#061421,#0B1C2D,#123B5A);
+color:white;
+}
+
+/* HEADER */
+.header{
+text-align:center;
+padding:40px 20px;
+background:#08131f;
+}
+
+.header h1{
+margin:0;
+font-size:36px;
+color:#FFD700;
+}
+
+.header p{
+margin-top:10px;
+color:#C9A227;
+font-family:'Noto Sans Telugu',sans-serif;
+}
+
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* DAY CARD */
+.day-card{
+background:linear-gradient(135deg,#132C44,#183e5c);
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.day-title{
+font-size:20px;
+color:#FFD700;
+margin-bottom:15px;
+font-family:'Noto Sans Telugu',sans-serif;
+}
+
+/* BUTTONS */
+.button-group{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+background:#1b4063;
+color:white;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#FFD700;
+color:black;
+}
+
+/* BACK BUTTON */
+.back{
+position:fixed;
+top:20px;
+left:20px;
+background:#FFD700;
+color:black;
+padding:8px 14px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+}
+
+@media(max-width:768px){
+.button-group{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back">← Home</a>
+
+<div class="header">
+<h1>🌿 Sai Deva 21 Days Meditation Journey</h1>
+<p>ప్రశాంతత → భావ నియంత్రణ → శక్తి ప్రేరణ</p>
+</div>
+
+<div class="container">
+
+<!-- Explore Section -->
+<div class="day-card">
+<div class="day-title">🌟 21 రోజుల ధ్యానం గురించి తెలుసుకోండి</div>
+<div class="button-group">
+<a href="21days-about.pdf" class="btn">📄 View PDF</a>
+<a href="21days-intro-audio.mp3" class="btn">🎧 Listen Audio</a>
+</div>
+</div>
+
+<!-- DAYS 1 to 21 -->
+
+<script>
+for(let i=1;i<=21;i++){
+document.write(`
+<div class="day-card">
+<div class="day-title">Day ${i} Meditation</div>
+<div class="button-group">
+<a href="day${i}.pdf" class="btn">📄 PDF</a>
+<a href="day${i}.mp3" class="btn">🎧 Audio</a>
+</div>
+</div>
+`);
+}
+</script>
+
+</div>
+
+</body>
+</html>
