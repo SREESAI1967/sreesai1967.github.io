@@ -206,7 +206,34 @@ transform: scale(1.1);
 @media(max-width:900px){
 
 .side-buttons{
-display:none;
+position:static;
+flex-direction:column;
+align-items:center;
+margin:20px 0;
+}
+
+.left-buttons,
+.right-buttons{
+position:static;
+}
+
+.hero{
+padding:40px 20px;
+}
+
+.main-heading{
+font-size:32px;
+}
+
+.sub-heading{
+font-size:18px;
+}
+
+.card-grid{
+flex-direction:column;
+align-items:center;
+}
+
 }
 
 .logo img{
